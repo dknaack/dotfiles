@@ -1,3 +1,4 @@
+local plugins = require 'plugins'
 local cmd = vim.cmd
 local fn = vim.fn
 local g = vim.g
