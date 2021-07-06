@@ -1,5 +1,5 @@
 local packer = require 'packer'
 
 return packer.startup(function()
-	use 'tpope/sensible.vim'
+    use 'wbthomason/packer.nvim'
 end)
