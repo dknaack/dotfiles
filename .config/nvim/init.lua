@@ -1,5 +1,3 @@
-local plugins = require 'plugins'
-local lsp = require 'lsp'
 local cmd = vim.cmd
 local fn = vim.fn
 local g = vim.g
@@ -34,4 +32,10 @@ bo.softtabstop = 4
 bo.shiftwidth = 4
 bo.expandtab = true
 
+g.mapleader = ','
+
 cmd('autocmd BufWritePost plugins.lua PackerCompile')
+
+-- load other modules
+require 'plugins'
+require 'lsp'
