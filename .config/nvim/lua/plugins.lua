@@ -1,10 +1,5 @@
-local packer = require 'packer'
-local o = vim.o
+return require('packer').startup(function(use)
 
-local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(...) end
-local function vim_set_keymap(...) vim.api.nvim_set_keymap(...) end
-
-return packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'tpope/vim-sensible'
     use 'tpope/vim-surround'
@@ -20,9 +15,10 @@ return packer.startup(function(use)
             { 'nvim-lua/popup.nvim' },
             { 'nvim-lua/plenary.nvim' },
         },
-        config = {
-            vim_set_keymap('n', '<Leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true })
-        },
+        config = function()
+            vim.api.nvim_set_keymap('n', '<Leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true })
+            vim.api.nvim_set_keymap('n', '<Leader>fb', '<cmd>Telescope buffers<cr>', { noremap = true })
+        end,
     }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 end)
