@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
     use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
     use 'mfussenegger/nvim-jdtls'
+
     use {
         'nvim-telescope/telescope.nvim',
         requires = {
@@ -20,5 +21,9 @@ return require('packer').startup(function(use)
             vim.api.nvim_set_keymap('n', '<Leader>fb', '<cmd>Telescope buffers<cr>', { noremap = true })
         end,
     }
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
 end)
