@@ -1,4 +1,5 @@
 local plugins = require 'plugins'
+local lsp = require 'lsp'
 local cmd = vim.cmd
 local fn = vim.fn
 local g = vim.g
