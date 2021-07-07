@@ -11,6 +11,8 @@ for _, server in pairs(servers) do
 end
 
 function M.setup_java()
+    jdtls.setup_dap()
+
     jdtls.start_or_attach { 
         cmd = { 'java-lsp.sh' },
         root_dir = jdtls.setup.find_root({ 'pom.xml' })
@@ -18,7 +20,8 @@ function M.setup_java()
 end
 
 util.create_augroup({
-    { 'FileType', 'java', 'lua require("lsp").setup_java()' }
+    { 'FileType', 'java', 'lua require("lsp").setup_java()' },
+    { 'BufWritePre', '*.java', 'lua require("jdtls").organize_imports()' },
 }, 'jdtls')
 
 return M
