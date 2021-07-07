@@ -7,8 +7,28 @@ return require('packer').startup(function(use)
     use 'tpope/vim-commentary'
     use 'neovim/nvim-lspconfig'
     use 'kabouzeid/nvim-lspinstall'
-    use 'hrsh7th/nvim-compe'
     use 'mfussenegger/nvim-jdtls'
+
+    -- auto completion
+    use 'hrsh7th/nvim-compe'
+
+    -- snippets
+    use {
+        'norcalli/snippets.nvim',
+        config = function()
+            local snippets = require 'snippets'
+
+            snippets.use_suggested_mappings()
+            snippets.snippets = {
+                _global = {
+                    date = os.date,
+                },
+                c = {
+                    include = [[#include ]],
+                },
+            }
+        end,
+    }
 
     use {
         'nvim-telescope/telescope.nvim',
