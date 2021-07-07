@@ -10,5 +10,12 @@ return packer.startup(function()
     use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
     use 'mfussenegger/nvim-jdtls'
+    use {
+        'nvim-telescope/telescope.nvim', 
+        requires = {
+            { 'nvim-lua/popup.nvim' },
+            { 'nvim-lua/plenary.nvim' },
+        },
+    }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 end)
