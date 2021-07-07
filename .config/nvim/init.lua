@@ -35,6 +35,7 @@ bo.expandtab = true
 g.mapleader = ','
 
 cmd('autocmd BufWritePost plugins.lua PackerCompile')
+cmd([[autocmd FileType c,cpp,java,lua autocmd BufWritePre <buffer> %s/\s\+$//e]])
 
 -- load other modules
 require 'plugins'
