@@ -62,6 +62,8 @@ return require('packer').startup(function(use)
                 },
             }
 
+            vim.o.completeopt = 'menuone,noselect'
+
             local args = { noremap = true, expr = true, silent = true }
 
             -- use tab to navigate completion menu
