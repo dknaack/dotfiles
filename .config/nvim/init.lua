@@ -37,6 +37,12 @@ g.mapleader = ','
 cmd('autocmd BufWritePost plugins.lua PackerCompile')
 cmd([[autocmd FileType c,cpp,java,lua autocmd BufWritePre <buffer> %s/\s\+$//e]])
 
+-- faster window switching
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w><C-h>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w><C-j>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w><C-k>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w><C-l>', { noremap = true })
+
 -- load other modules
 require 'plugins'
 require 'lsp'
