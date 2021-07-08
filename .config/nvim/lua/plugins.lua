@@ -9,6 +9,20 @@ return require('packer').startup(function(use)
     use 'kabouzeid/nvim-lspinstall'
     use 'mfussenegger/nvim-jdtls'
 
+    -- file tree
+    use {
+        'preservim/nerdtree',
+        config = function()
+            -- auto open NERDTree
+            vim.cmd([[autocmd VimEnter * NERDTree | wincmd p]])
+
+            -- close NERDTree if it's the last window
+            vim.cmd([[autocmd BufEnter * if tabpagenr('$') == 1]] ..
+                [[ && winnr('$') == 1 && exists('b:NERDTree')]] ..
+                [[ && b:NERDTree.isTabTree() | quit | endif]])
+        end,
+    }
+
     -- auto completion
     use {
         'hrsh7th/nvim-compe',
@@ -123,6 +137,7 @@ return require('packer').startup(function(use)
         end,
     }
 
+    -- fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
         requires = {
