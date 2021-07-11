@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
 
             lualine.setup {
                 options = {
-                    theme = 'iceberg_dark',
+                    theme = 'auto',
                     section_separators = '',
                     component_separators = '',
                 },
