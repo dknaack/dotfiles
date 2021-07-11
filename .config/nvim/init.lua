@@ -22,6 +22,8 @@ o.incsearch = true
 o.splitbelow = true
 o.splitright = true
 
+o.termguicolors = true
+
 -- window options
 wo.number = true
 wo.relativenumber = true
