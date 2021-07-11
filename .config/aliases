@@ -33,7 +33,7 @@ alias \
 	gd="git diff" \
 	gl="git log" \
 	gs="git status" \
-	hl=hledger
+	hl=hledger \
 	iv="sxiv" \
 	ka="killall" \
 	la="ls -A" \
@@ -51,4 +51,4 @@ alias \
 	vim=neovim \
 	y="yay" \
 	z='zathura' \
-    py="ipython" \
+    py="ipython"
