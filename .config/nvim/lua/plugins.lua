@@ -9,6 +9,12 @@ return require('packer').startup(function(use)
     use 'kabouzeid/nvim-lspinstall'
     use 'mfussenegger/nvim-jdtls'
 
+    -- colorscheme
+    use {
+        'navarasu/onedark.nvim',
+        config = [[vim.cmd('colorscheme onedark')]],
+    }
+
     -- status line
     use {
         'hoob3rt/lualine.nvim',
