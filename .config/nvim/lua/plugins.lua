@@ -142,6 +142,7 @@ return require('packer').startup(function(use)
         end,
     }
 
+    -- treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
@@ -154,5 +155,18 @@ return require('packer').startup(function(use)
                 }
             }
         end,
+    }
+
+    -- git decorations
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        },
+        config = function()
+            local gitsigns = require 'gitsigns'
+
+            gitsigns.setup()
+        end
     }
 end)
