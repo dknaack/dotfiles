@@ -9,6 +9,23 @@ return require('packer').startup(function(use)
     use 'kabouzeid/nvim-lspinstall'
     use 'mfussenegger/nvim-jdtls'
 
+    -- status line
+    use {
+        'hoob3rt/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+        config = function()
+            local lualine = require 'lualine'
+
+            lualine.setup {
+                options = {
+                    theme = 'iceberg_dark',
+                    section_separators = '',
+                    component_separators = '',
+                },
+            }
+        end,
+    }
+
     -- file tree
     use {
         'preservim/nerdtree',
