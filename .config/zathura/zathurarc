@@ -1,0 +1,22 @@
+# Colorscheme
+set default-bg "#11121D"
+set default-fg "#A0A8CD"
+set notification-bg "#212234"
+set notification-fg "#A0A8CD"
+set statusbar-bg "#212234"
+set statusbar-fg "#A0A8CD"
+set inputbar-bg "#212234"
+set inputbar-fg "#A0A8CD"
+set recolor-darkcolor  "#FFFFFF"
+set recolor-lightcolor "#11121D"
+
+# Key bindings
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map K zoom in
+map J zoom out
+map i recolor
+map p print
