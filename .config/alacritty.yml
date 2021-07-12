@@ -1,0 +1,26 @@
+font:
+  normal:
+    family: inconsolata
+    size: 11
+window:
+  padding:
+    x: 12
+    y: 12
+schemes:
+  # Tokyodark based on https://github.com/tiagovla/tokyodark.nvim
+  tokyodark: &tokyodark
+    primary:
+      background: '#11121D'
+      foreground: '#A0A8CD'
+    normal:
+      red: '#EE6D85'
+      orange: '#F6955B'
+      yellow: '#D7A65F'
+      green: '#95C561'
+      blue: '#7199EE'
+      cyan: '#38A89D'
+      purple: '#A485DD'
+      grey: '#4A5057'
+cursor:
+  style: Beam
+colors: *tokyodark
