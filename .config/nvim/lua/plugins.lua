@@ -11,8 +11,8 @@ return require('packer').startup(function(use)
 
     -- colorscheme
     use {
-        'navarasu/onedark.nvim',
-        config = [[vim.cmd('colorscheme onedark')]],
+        'tiagovla/tokyodark.nvim',
+        config = [[vim.cmd('colorscheme tokyodark')]],
     }
 
     -- status line
