@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     use 'kabouzeid/nvim-lspinstall'
     use 'mfussenegger/nvim-jdtls'
+    use 'ziglang/zig.vim'
 
     -- colorscheme
     use {
@@ -18,7 +19,7 @@ return require('packer').startup(function(use)
     -- status line
     use {
         'hoob3rt/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+        requires = { 'kyazdani42/nvim-web-devicons', opt = false },
         config = function()
             local lualine = require 'lualine'
 
@@ -28,6 +29,22 @@ return require('packer').startup(function(use)
                     section_separators = '',
                     component_separators = '',
                 },
+            }
+        end,
+    }
+
+    -- icons
+    use {
+        'glepnir/lspsaga.nvim',
+        disable = true,
+        config = function()
+            local saga = require('lspsaga')
+
+            saga.init_lsp_saga {
+                error_sign = '',
+                warn_sign = '',
+                hint_sign = '',
+                infor_sign = '',
             }
         end,
     }
@@ -79,9 +96,9 @@ return require('packer').startup(function(use)
                     calc = true,
                     nvim_lsp = true,
                     nvim_lua = true,
-                    vsnip = true,
-                    ultisnips = true,
-                    luasnip = true,
+                    vsnip = false,
+                    ultisnips = false,
+                    luasnip = false,
                 },
             }
 
