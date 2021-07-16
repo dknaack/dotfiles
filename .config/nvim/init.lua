@@ -44,6 +44,8 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w><C-j>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w><C-k>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w><C-l>', { noremap = true })
 
+vim.api.nvim_set_keymap('n', '<leader>m', ':make<cr>', { noremap = true })
+
 -- load other modules
 require 'plugins'
 require 'lsp'
