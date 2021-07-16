@@ -1,6 +1,6 @@
 font:
   normal:
-    family: inconsolata
+    family: 'Inconsolata Nerd Font'
     size: 11
 window:
   padding:
