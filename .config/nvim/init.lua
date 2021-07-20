@@ -46,6 +46,9 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w><C-l>', { noremap = true })
 
 vim.api.nvim_set_keymap('n', '<leader>m', ':make<cr>', { noremap = true })
 
+-- set .h file to c file type
+cmd('autocmd BufEnter *.h set ft=c')
+
 -- load other modules
 require 'plugins'
 require 'lsp'
