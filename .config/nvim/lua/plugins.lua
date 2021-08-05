@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-surround'
     use 'tpope/vim-fugitive'
     use 'tpope/vim-commentary'
+    use 'tpope/vim-repeat'
     use 'neovim/nvim-lspconfig'
     use 'kabouzeid/nvim-lspinstall'
     use 'mfussenegger/nvim-jdtls'
