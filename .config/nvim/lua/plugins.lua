@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     use 'mfussenegger/nvim-jdtls'
     use 'ziglang/zig.vim'
     use 'tikhomirov/vim-glsl'
+    use 'junegunn/vim-easy-align'
 
     -- debugging tools
     use {
