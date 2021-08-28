@@ -6,7 +6,7 @@ alias \
 	mv="mv -iv" \
 	rm="rm -iv"  \
 	grep="grep --color=auto" \
-	ls="ls -FhN --color=auto --group-directories-first" \
+    ls="exa -Fh --color=auto --group-directories-first" \
 	mkd="mkdir -pv" \
 	diff="diff --color=auto" \
 	surf="tabbed -c surf -e" \
