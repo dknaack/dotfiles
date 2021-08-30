@@ -92,29 +92,18 @@ return require('packer').startup(function(use)
 
     -- auto completion
     use {
-        'hrsh7th/nvim-cmp',
+        'nvim-lua/completion-nvim',
         config = function()
-            local cmp = require('cmp')
+            vim.cmd([[autocmd BufEnter * lua require('completion').on_attach()]])
 
-            cmp.setup {
-                mapping = {
-                    ['<C-p>'] = cmp.mapping.select_prev_item(),
-                    ['<C-n>'] = cmp.mapping.select_next_item(),
-                    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-                    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                    ['<C-Space>'] = cmp.mapping.complete(),
-                    ['<C-e>'] = cmp.mapping.close(),
-                    ['<CR>'] = cmp.mapping.confirm({
-                        behavior = cmp.ConfirmBehavior.Insert,
-                        select = true,
-                    })
-                },
-
-                sources = {
-                    { name = 'buffer' },
-                },
-            }
-        end
+            -- TODO: change this to lua
+            vim.cmd([[set completeopt=menuone,noinsert,noselect]])
+            vim.cmd([[set shortmess+=c]])
+            vim.cmd([[inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"]])
+            vim.cmd([[inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
+            vim.cmd([[let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy'] ]])
+            vim.cmd([[let g:completion_enable_snippet = 'snippets.nvim']])
+        end,
     }
 
     -- snippets
@@ -129,7 +118,13 @@ return require('packer').startup(function(use)
                     date = os.date,
                 },
                 c = {
-                    include = [[#include ]],
+                    guard = [[
+#ifndef ${1|S.v:upper():gsub("%s+", "_")}_H
+#define ${1|S.v:upper():gsub("%s+", "_")}_H
+
+
+#endif /* ${1|S.v:upper():gsub("%s+", "_")}_H */
+                        ]],
                 },
             }
         end,
