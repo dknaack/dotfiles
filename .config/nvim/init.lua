@@ -32,6 +32,7 @@ wo.relativenumber = true
 bo.tabstop = 4
 bo.shiftwidth = 4
 bo.expandtab = true
+cmd('set ts=4 sw=4 expandtab')
 
 g.mapleader = ','
 
@@ -45,6 +46,8 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<C-w><C-k>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w><C-l>', { noremap = true })
 
 vim.api.nvim_set_keymap('n', '<leader>m', ':make<cr>', { noremap = true })
+
+vim.api.nvim_set_keymap('n', 'Q', '@q', { noremap = true })
 
 -- set .h file to c file type
 cmd('autocmd BufEnter *.h set ft=c')
