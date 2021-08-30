@@ -6,7 +6,33 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
     use 'tpope/vim-commentary'
     use 'tpope/vim-repeat'
-    use 'neovim/nvim-lspconfig'
+
+    use {
+        'neovim/nvim-lspconfig',
+        config = function()
+            local lsp = require('lspconfig')
+
+            local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+            local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+            local on_attach = function(client, bufnr)
+                local opts = { noremap = true, silent = true }
+
+                buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+                buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+                buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+                buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+            end
+
+            local servers = { 'clangd' }
+            for _, server in ipairs(servers) do
+                lsp[server].setup {
+                    on_attach = on_attach,
+                }
+            end
+        end,
+    }
+
     use 'kabouzeid/nvim-lspinstall'
     use 'mfussenegger/nvim-jdtls'
     use 'ziglang/zig.vim'
