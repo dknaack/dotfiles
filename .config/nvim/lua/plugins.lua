@@ -102,31 +102,16 @@ return require('packer').startup(function(use)
             vim.cmd([[inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"]])
             vim.cmd([[inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
             vim.cmd([[let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy'] ]])
-            vim.cmd([[let g:completion_enable_snippet = 'snippets.nvim']])
+            vim.cmd([[let g:completion_enable_snippet = 'UltiSnips']])
         end,
     }
 
     -- snippets
     use {
-        'norcalli/snippets.nvim',
+        'SirVer/ultisnips',
         config = function()
-            local snippets = require 'snippets'
-
-            snippets.use_suggested_mappings()
-            snippets.snippets = {
-                _global = {
-                    date = os.date,
-                },
-                c = {
-                    guard = [[
-#ifndef ${1|S.v:upper():gsub("%s+", "_")}_H
-#define ${1|S.v:upper():gsub("%s+", "_")}_H
-
-
-#endif /* ${1|S.v:upper():gsub("%s+", "_")}_H */
-                        ]],
-                },
-            }
+            vim.cmd([[let g:UltiSnipsEditSplit="vertical"]])
+            vim.cmd([[let g:UltiSnipsExpandTrigger="<s-tab>"]])
         end,
     }
 
