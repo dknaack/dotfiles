@@ -1,11 +1,32 @@
 return require('packer').startup(function(use)
 
-    use 'wbthomason/packer.nvim'
+    use {
+        'wbthomason/packer.nvim',
+        config = function()
+            local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+            local opts = { noremap = true, silent = true }
+
+            buf_set_keymap('n', '<Leader>pc', '<cmd>PackerCompile<CR>', opts)
+            buf_set_keymap('n', '<Leader>pi', '<cmd>PackerInstall<CR>', opts)
+            buf_set_keymap('n', '<Leader>pu', '<cmd>PackerUpdate<CR>', opts)
+            buf_set_keymap('n', '<Leader>ps', '<cmd>PackerSync<CR>', opts)
+        end,
+    }
+
     use 'tpope/vim-sensible'
     use 'tpope/vim-surround'
-    use 'tpope/vim-fugitive'
     use 'tpope/vim-commentary'
     use 'tpope/vim-repeat'
+
+    use {
+        'tpope/vim-fugitive',
+        config = function()
+            local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+            local opts = { noremap = true, silent = true }
+
+            buf_set_keymap('n', '<Leader>gaa', '<cmd>Git add %<CR>', opts)
+        end,
+    }
 
     use {
         'neovim/nvim-lspconfig',
