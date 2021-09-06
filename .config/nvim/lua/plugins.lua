@@ -56,8 +56,10 @@ return require('packer').startup(function(use)
 
     use 'kabouzeid/nvim-lspinstall'
     use 'mfussenegger/nvim-jdtls'
-    use 'ziglang/zig.vim'
     use 'tikhomirov/vim-glsl'
+
+    use 'liuchengxu/vista.vim'
+    use 'wellle/context.vim'
 
     -- alignment of '=', etc.
     use {
