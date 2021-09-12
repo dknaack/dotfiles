@@ -55,3 +55,6 @@ cmd('autocmd BufEnter *.h set ft=c')
 -- load other modules
 require 'plugins'
 require 'lsp'
+
+-- set nasm to the default syntax for assembly
+cmd('au BufRead,BufNewFile *.s set ft=nasm')
