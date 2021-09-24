@@ -13,6 +13,15 @@ return require('packer').startup(function(use)
         end,
     }
 
+    use {
+        'junegunn/goyo.vim',
+        config = function()
+            local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+            local opts = { noremap = true, silent = true }
+
+            buf_set_keymap('n', '<Leader>gg', '<cmd>Goyo<CR>', opts)
+        end
+    }
     use 'tpope/vim-sensible'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
@@ -172,8 +181,18 @@ return require('packer').startup(function(use)
             { 'nvim-lua/plenary.nvim' },
         },
         config = function()
-            vim.api.nvim_set_keymap('n', '<Leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true })
-            vim.api.nvim_set_keymap('n', '<Leader>fb', '<cmd>Telescope buffers<cr>', { noremap = true })
+            local opts = { noremap = true }
+            local function set_keymap(...)
+                vim.api.nvim_set_keymap(...)
+            end
+
+            set_keymap('n', '<Leader>ff', '<cmd>Telescope find_files<cr>', opts)
+            set_keymap('n', '<Leader>fb', '<cmd>Telescope buffers<cr>', opts)
+            set_keymap('n', '<Leader>ft', '<cmd>Telescope tags<cr>', opts)
+            set_keymap('n', '<Leader>fj', '<cmd>Telescope jumplist<cr>', opts)
+            set_keymap('n', '<Leader>fs', '<cmd>Telescope current_buffer_fuzzy_find<cr>', opts)
+            set_keymap('n', '<Leader>fas', '<cmd>Telescope fuzzy_find<cr>', opts)
+            set_keymap('n', '<Leader>fm', '<cmd>Telescope man_pages<cr>', opts)
         end,
     }
 
