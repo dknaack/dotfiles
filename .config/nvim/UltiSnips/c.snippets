@@ -93,7 +93,7 @@ ecalloc(size_t nmemb, size_t size)
 }
 endsnippet
 
-snippet guard "header include guard" b
+snippet guard "header include guard" bA
 #ifndef $1_H
 #define $1_H
 
@@ -103,4 +103,18 @@ $0
 if len(t[1]) > 0:
 	t[1] = t[1].upper().replace(' ', '_').replace('.', '_')
 `
+endsnippet
+
+snippet inttypes "int typedefs" w
+typedef uintptr_t usize;
+typedef uint64_t u64;
+typedef uint32_t u32;
+typedef uint16_t u16;
+typedef uint8_t  u8;
+
+typedef intptr_t isize;
+typedef int64_t i64;
+typedef int32_t i32;
+typedef int16_t i16;
+typedef int8_t  i8;
 endsnippet
