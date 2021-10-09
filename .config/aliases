@@ -2,54 +2,54 @@
 
 # Default options
 alias \
-	cp="cp -iv" \
-	mv="mv -iv" \
-	rm="rm -iv"  \
-	grep="grep --color=auto" \
+    cp="cp -iv" \
+    mv="mv -iv" \
+    rm="rm -iv"  \
+    grep="grep --color=auto" \
     ls="exa -Fh --color=auto --group-directories-first" \
-	mkd="mkdir -pv" \
-	diff="diff --color=auto" \
-	surf="tabbed -c surf -e" \
-	cfg='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME' \
-	cal='cal -m' \
-	remind='remind -m -b1' \
-	rem='rem -m -b1' \
-	nohup='>/dev/null nohup' \
-	mbsync="mbsync -c $HOME/.config/mbsyncrc" \
-	df='df -h' \
-	du='du -h' \
-	sml='rlwrap sml' \
-	neuron="neuron -d $HOME/notes/" \
-	minecraft="env DRI_PRIME=1 minecraft-launcher --workDir \"$HOME/.config/minecraft\"" \
+    mkd="mkdir -pv" \
+    diff="diff --color=auto" \
+    surf="tabbed -c surf -e" \
+    cfg='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME' \
+    cal='cal -m' \
+    remind='remind -m -b1' \
+    rem='rem -m -b1' \
+    nohup='>/dev/null nohup' \
+    mbsync="mbsync -c $HOME/.config/mbsyncrc" \
+    df='df -h' \
+    du='du -h' \
+    sml='rlwrap sml' \
+    neuron="neuron -d $HOME/notes/" \
+    minecraft="env DRI_PRIME=1 minecraft-launcher --workDir \"$HOME/.config/minecraft\"" \
     wget="wget --hsts-file=$XDG_CACHE_HOME/.wget-hsts"
 
 # Shortcuts
 alias \
-	...="cd ../.." \
-	..="cd .." \
-	SS="sudo systemctl" \
-	SU="systemctl --user" \
-	g=git \
-	gd="git diff" \
-	gl="git log" \
-	gs="git status" \
-	hl=hledger \
-	iv=sxiv \
-	ka=killall \
-	la="ls -a" \
-	ll="ls -al" \
-	m=mpv \
-	mutt=neomutt \
-	n=neuron \
-	nb=newsboat \
-	ns=notify-send \
-	o=xdg-open \
-	p="paru" \
-	sl=ls	\
-	sv="sudo $EDITOR" \
-	v="$EDITOR" \
-	vim=neovim \
+    ...="cd ../.." \
+    ..="cd .." \
+    SS="sudo systemctl" \
+    SU="systemctl --user" \
+    g=git \
+    gd="git diff" \
+    gl="git log" \
+    gs="git status" \
+    hl=hledger \
+    iv=sxiv \
+    ka=killall \
+    la="ls -a" \
+    ll="ls -al" \
+    m=mpv \
+    mutt=neomutt \
+    n=neuron \
+    nb=newsboat \
+    ns=notify-send \
+    o=xdg-open \
+    p="paru" \
+    sl=ls   \
+    sv="sudo $EDITOR" \
+    v="$EDITOR" \
+    vim=neovim \
     x=startx \
-	y=yay \
-	z=zathura \
+    y=yay \
+    z=zathura \
     py=ipython
