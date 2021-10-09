@@ -1,0 +1,27 @@
+[user]
+	name = Daniel Knaack
+	email = daniel.knaack@protonmail.com
+	signingkey = B355EE0AE8688920
+[ui]
+	color = true
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[alias]
+	st = status
+	sw = switch
+	co = checkout
+	ci = commit
+	lg = log
+	lo = log --oneline
+	d = diff
+	s = status
+	c = commit
+	cfg = config
+	su = status -uno
+	ds = diff --staged
+	cfgg = config --global
+	cm = commit -m
+	pom = push origin main
+	ca = commit --amend
