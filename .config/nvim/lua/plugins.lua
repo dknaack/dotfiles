@@ -150,17 +150,43 @@ return require('packer').startup(function(use)
 
     -- auto completion
     use {
-        'nvim-lua/completion-nvim',
+        'hrsh7th/nvim-cmp',
+        requires = { 'hrsh7th/cmp-nvim-lsp' },
         config = function()
-            vim.cmd([[autocmd BufEnter * lua require('completion').on_attach()]])
+            local cmp = require 'cmp'
+            local cmp_lsp = require 'cmp_nvim_lsp'
+            local lspconfig = require 'lspconfig'
 
-            -- TODO: change this to lua
-            vim.cmd([[set completeopt=menuone,noinsert,noselect]])
-            vim.cmd([[set shortmess+=c]])
-            vim.cmd([[inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"]])
-            vim.cmd([[inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
-            vim.cmd([[let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy'] ]])
-            vim.cmd([[let g:completion_enable_snippet = 'UltiSnips']])
+            cmp.setup {
+                snippet = {
+                    expand = function(args)
+                        vim.fn["UltiSnips#Anon"](args.body)
+                    end,
+                },
+                mapping = {
+                    ['<Tab>'] = function(fallback)
+                        if cmp.visible() then
+                            cmp.select_next_item()
+                        else
+                            fallback()
+                        end
+                    end,
+                    --['<C-d>'] = cmp.mapping.scroll_docs(-4),
+                    --['<C-f>'] = cmp.mapping.scroll_docs(4),
+                    --['<C-Space>'] = cmp.mapping.complete(),
+                    --['<C-e>'] = cmp.mapping.close(),
+                    --['<CR>'] = cmp.mapping.confirm({ select = true }),
+                },
+                sources = {
+                    { name = 'nvim_lsp' },
+                    { name = 'ultisnips' },
+                    { name = 'buffer' },
+                },
+            }
+
+            local caps = vim.lsp.protocol.make_client_capabilities()
+            caps = cmp_lsp.update_capabilities(caps)
+            lspconfig.clangd.setup { capabilities = caps }
         end,
     }
 
