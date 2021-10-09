@@ -38,5 +38,4 @@ export \
 	ZDOTDIR="$HOME/.config/zsh" \
 	_JAVA_AWT_WM_NONREPARENTING=1
 
-source "$HOME/.config/vars"
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x dwm >/dev/null && startx
