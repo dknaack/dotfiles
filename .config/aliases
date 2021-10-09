@@ -44,7 +44,7 @@ alias \
 	nb=newsboat \
 	ns=notify-send \
 	o=xdg-open \
-	p="sudo pacman" \
+	p="paru" \
 	sl=ls	\
 	sv="sudo $EDITOR" \
 	v="$EDITOR" \
