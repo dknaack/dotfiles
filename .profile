@@ -29,7 +29,6 @@ export \
 	READER="zathura" \
 	RUSTUP_HOME="$HOME/.config/rustup" \
 	SUDO_EDITOR="sudo nvim" \
-	SXHKDRC="$HOME/.config/sxhkd/uni" \
 	TERMINAL='kitty' \
 	TEXMFHOME="$HOME/.config/texmf" \
 	WINEPREFIX="$HOME/.config/wine" \
