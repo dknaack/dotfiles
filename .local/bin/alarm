@@ -1,0 +1,9 @@
+#!/bin/sh
+
+input="$(echo | dmenu -p 'Alarm: ')"
+time="$(echo $input | sed 's/ .*//' | date -f- '+%s')"
+duration="$(($time - $(date '+%s')))"
+comment="$(echo $input | sed 's/[^ ]* //')"
+
+[ "$duration" -lt 0 ] && duration=$(($duration + 86400))
+sleep "$duration" && notify-send '⏰ Alarm!' "$comment"

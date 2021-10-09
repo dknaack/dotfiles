@@ -1,0 +1,7 @@
+#!/bin/sh
+
+input="$(echo | dmenu -p 'Timer: ')"
+duration="$(echo $input | sed 's/ .*//' | awk -F: 'NF < 3 { print $1 * 60 + $2 } NF >= 3 { print $1 * 3600 + $2 * 60 + $3 }')"
+comment="$(echo $input | sed 's/[^ ]* //')"
+
+sleep "$duration" && notify-send '⏰ Timer ended' "Duration: $duration sec\n$comment"
