@@ -1,0 +1,42 @@
+# basic key bindigns
+super + Return
+	$TERMINAL
+super + w
+	$BROWSER
+super + shift + w
+    nyxt
+super + d
+	dmenu_run -wi 1920 -x 0 -h 32 -y 0
+super + x
+	quit
+super + minus ; {m,t}
+	$TERMINAL -e {ncmpcpp,htop}
+
+# music control
+XF86Audio{Lower,Raise}Volume
+		pactl set-sink-volume @DEFAULT_SINK@ {-,+}1000
+XF86Audio{Next,Prev}
+		mpc -q {next,prev}
+XF86AudioPlay
+		mpc toggle
+XF86AudioMute
+		pactl set-sink-mute @DEFAULT_SINK@ toggle
+shift + XF86Audio{Lower,Raise}Volume
+		mpc volume {-,+}5
+
+# change brightness
+super + {F1,F2}
+		brightness {-,+}5
+
+# reload sxhkd configuration
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + alt + s
+	maim -s | xclip -selection clipboard
+
+super + n ; {n,f,s}
+	{$TERMINAL note, $TERMINAL notes, screenshot}
+
+super + a
+	anki
