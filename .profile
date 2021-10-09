@@ -1,6 +1,7 @@
 #!/bin/sh
 
-export PATH="$HOME/.local/bin/pso:$HOME/.local/bin:$HOME/.local/bin/statusbar/:$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.local/bin/statusbar/:$PATH"
+
 export \
 	BROWSER="firefox" \
 	CARGO_HOME="$HOME/.config/cargo" \
