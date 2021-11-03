@@ -29,7 +29,7 @@ export \
 	READER="zathura" \
 	RUSTUP_HOME="$HOME/.config/rustup" \
 	SUDO_EDITOR="sudo nvim" \
-	TERMINAL='kitty' \
+	TERMINAL='st' \
 	TEXMFHOME="$HOME/.config/texmf" \
 	WINEPREFIX="$HOME/.config/wine" \
 	XAUTHORITY="$HOME/.config/Xauthority" \
