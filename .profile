@@ -3,7 +3,7 @@
 export PATH="$HOME/.local/bin:$HOME/.local/bin/statusbar/:$PATH"
 
 export \
-	BROWSER="firefox" \
+	BROWSER="librewolf" \
 	CARGO_HOME="$HOME/.config/cargo" \
 	CCACHE_DIR="$HOME/.cache/ccache/" \
 	EDITOR="nvim" \
