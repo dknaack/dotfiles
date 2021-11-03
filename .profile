@@ -15,7 +15,6 @@ export \
 	GROFF_FONT_PATH="$HOME/.local/share/groff/fonts" \
 	GROFF_TMAC_PATH="$HOME/.local/share/groff/tmac" \
 	GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0" \
-	GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0" \
 	HISTCONTROL='ignoreboth' \
 	HISTFILE="$HOME/.config/histfile" \
     IPYTHONDIR="$HOME/.config/ipython" \
