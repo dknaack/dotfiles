@@ -135,15 +135,16 @@ return require('packer').startup(function(use)
 
     -- file tree
     use {
-        'preservim/nerdtree',
+        'kyazdani42/nvim-tree.lua',
+        requires = 'kyazdani42/nvim-web-devicons',
         config = function()
-            -- auto open NERDTree
-            vim.cmd([[autocmd VimEnter * NERDTree | wincmd p]])
+            local tree = require 'nvim-tree'
 
-            -- close NERDTree if it's the last window
-            vim.cmd([[autocmd BufEnter * if tabpagenr('$') == 1]] ..
-                [[ && winnr('$') == 1 && exists('b:NERDTree')]] ..
-                [[ && b:NERDTree.isTabTree() | quit | endif]])
+            tree.setup {
+                auto_close = true,
+                --open_on_setup = true,
+                open_on_tab = true,
+            }
         end,
     }
 
