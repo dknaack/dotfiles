@@ -68,7 +68,6 @@ return require('packer').startup(function(use)
     use 'tikhomirov/vim-glsl'
 
     use 'liuchengxu/vista.vim'
-    use 'wellle/context.vim'
 
     -- alignment of '=', etc.
     use {
