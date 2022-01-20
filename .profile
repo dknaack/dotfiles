@@ -29,7 +29,7 @@ export \
     PASSAGE_RECIPIENTS_FILE="$HOME/.local/share/passage/recipients" \
 	PATH="$PATH:$CARGO_HOME/bin" \
 	READER="zathura" \
-	RUSTUP_HOME="$HOME/.config/rustup" \
+	RUSTUP_HOME="$HOME/.local/share/rustup" \
 	SUDO_EDITOR="sudo nvim" \
 	TERMINAL='st' \
 	TEXMFHOME="$HOME/.config/texmf" \
