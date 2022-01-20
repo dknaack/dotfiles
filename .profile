@@ -24,6 +24,9 @@ export \
 	MAILDIR="$HOME/.local/share/mail" \
 	NOTMUCH_CONFIG="$HOME/.config/notmuch-config" \
 	PASSWORD_STORE_DIR="$HOME/.local/share/password-store" \
+	PASSAGE_DIR="$HOME/.local/share/passage/store" \
+    PASSAGE_IDENTITIES_FILE="$HOME/.local/share/passage/identities" \
+    PASSAGE_RECIPIENTS_FILE="$HOME/.local/share/passage/recipients" \
 	PATH="$PATH:$CARGO_HOME/bin" \
 	READER="zathura" \
 	RUSTUP_HOME="$HOME/.config/rustup" \
