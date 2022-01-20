@@ -4,7 +4,7 @@ export PATH="$HOME/.local/bin:$HOME/.local/bin/statusbar/:$PATH"
 
 export \
 	BROWSER="librewolf" \
-	CARGO_HOME="$HOME/.config/cargo" \
+	CARGO_HOME="$HOME/.local/share/cargo" \
 	CCACHE_DIR="$HOME/.cache/ccache/" \
 	EDITOR="nvim" \
 	GEM_PATH="$HOME/.local/share/gem" \
