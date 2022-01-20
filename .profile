@@ -10,7 +10,7 @@ export \
 	GEM_PATH="$HOME/.local/share/gem" \
 	GEM_SPEC_CACHE="$HOME/.cache/gem" \
 	GNUPGHOME="$HOME/.config/gnupg" \
-	GOPATH="$HOME/.config/go" \
+	GOPATH="$HOME/.local/share/go" \
 	GPG_TTY="$(tty)" \
 	GROFF_FONT_PATH="$HOME/.local/share/groff/fonts" \
 	GROFF_TMAC_PATH="$HOME/.local/share/groff/tmac" \
