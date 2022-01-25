@@ -13,15 +13,6 @@ return require('packer').startup(function(use)
         end,
     }
 
-    use {
-        'junegunn/goyo.vim',
-        config = function()
-            local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-            local opts = { noremap = true, silent = true }
-
-            buf_set_keymap('n', '<Leader>gg', '<cmd>Goyo<CR>', opts)
-        end
-    }
     use 'tpope/vim-dispatch'
     use 'tpope/vim-sensible'
     use 'tpope/vim-surround'
