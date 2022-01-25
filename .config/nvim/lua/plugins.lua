@@ -55,9 +55,7 @@ return require('packer').startup(function(use)
         'hoob3rt/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = false },
         config = function()
-            local lualine = require 'lualine'
-
-            lualine.setup {
+            require('lualine').setup {
                 options = {
                     theme = 'auto',
                     section_separators = '',
@@ -104,12 +102,8 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         config = function()
-            local configs = require 'nvim-treesitter.configs'
-
-            configs.setup {
-                highlight = {
-                    enable = true,
-                }
+            require('nvim-treesitter.configs').setup {
+                highlight = { enable = true },
             }
         end,
     }
@@ -117,13 +111,9 @@ return require('packer').startup(function(use)
     -- git decorations
     use {
         'lewis6991/gitsigns.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim'
-        },
+        requires = { 'nvim-lua/plenary.nvim' },
         config = function()
-            local gitsigns = require 'gitsigns'
-
-            gitsigns.setup()
+            require('gitsigns').setup()
         end
     }
 end)
