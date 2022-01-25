@@ -40,4 +40,7 @@ export \
     ZDOTDIR="$HOME/.config/zsh" \
     _JAVA_AWT_WM_NONREPARENTING=1
 
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x dwm >/dev/null && startx
+if [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x dwm >/dev/null; then
+    echo 'Starting X...'
+    startx >~/.cache/x.log 2>&1
+fi
