@@ -45,14 +45,6 @@ return require('packer').startup(function(use)
         end,
     }
 
-    -- edit markdown tables using sc-im
-    use {
-        'mipmip/vim-scimark',
-        config = function()
-            vim.g.scimCommand = '/usr/bin/sc-im'
-        end,
-    }
-
     -- colorscheme
     use {
         'tiagovla/tokyodark.nvim',
