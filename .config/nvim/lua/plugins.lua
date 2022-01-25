@@ -68,6 +68,8 @@ return require('packer').startup(function(use)
     use 'kabouzeid/nvim-lspinstall'
     use 'mfussenegger/nvim-jdtls'
     use 'tikhomirov/vim-glsl'
+    use 'ziglang/zig.vim'
+    use 'andviro/nim.vim'
 
     use 'liuchengxu/vista.vim'
 
