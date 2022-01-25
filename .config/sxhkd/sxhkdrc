@@ -37,8 +37,8 @@ super + Escape
 super + alt + s
 	maim -s | tee "$HOME/pics/screenshot/$(date '+%F_%T').png" | xclip -selection clipboard
 
-super + n ; {n,f,s}
-	{$TERMINAL note, $TERMINAL notes, screenshot}
+super + n ; {n,s,i,w}
+	note {new,search,img,watch}
 
 super + a
 	anki
