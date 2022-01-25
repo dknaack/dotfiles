@@ -1,5 +1,4 @@
 return require('packer').startup(function(use)
-
     use {
         'wbthomason/packer.nvim',
         config = function()
@@ -65,79 +64,6 @@ return require('packer').startup(function(use)
                     component_separators = '',
                 },
             }
-        end,
-    }
-
-    -- icons
-    use {
-        'glepnir/lspsaga.nvim',
-        disable = true,
-        config = function()
-            local saga = require('lspsaga')
-
-            saga.init_lsp_saga {
-                error_sign = '',
-                warn_sign = '',
-                hint_sign = '',
-                infor_sign = '',
-            }
-        end,
-    }
-
-    -- file tree
-    use {
-        'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = function()
-            local tree = require 'nvim-tree'
-
-            tree.setup {
-                auto_close = true,
-                --open_on_setup = true,
-                open_on_tab = true,
-            }
-        end,
-    }
-
-    -- auto completion
-    use {
-        'hrsh7th/nvim-cmp',
-        requires = { 'hrsh7th/cmp-nvim-lsp' },
-        config = function()
-            local cmp = require 'cmp'
-            local cmp_lsp = require 'cmp_nvim_lsp'
-            local lspconfig = require 'lspconfig'
-
-            cmp.setup {
-                snippet = {
-                    expand = function(args)
-                        vim.fn["UltiSnips#Anon"](args.body)
-                    end,
-                },
-                mapping = {
-                    ['<Tab>'] = function(fallback)
-                        if cmp.visible() then
-                            cmp.select_next_item()
-                        else
-                            fallback()
-                        end
-                    end,
-                    --['<C-d>'] = cmp.mapping.scroll_docs(-4),
-                    --['<C-f>'] = cmp.mapping.scroll_docs(4),
-                    --['<C-Space>'] = cmp.mapping.complete(),
-                    --['<C-e>'] = cmp.mapping.close(),
-                    --['<CR>'] = cmp.mapping.confirm({ select = true }),
-                },
-                sources = {
-                    { name = 'nvim_lsp' },
-                    { name = 'ultisnips' },
-                    { name = 'buffer' },
-                },
-            }
-
-            local caps = vim.lsp.protocol.make_client_capabilities()
-            caps = cmp_lsp.update_capabilities(caps)
-            lspconfig.clangd.setup { capabilities = caps }
         end,
     }
 
