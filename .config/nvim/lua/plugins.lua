@@ -92,6 +92,7 @@ return require('packer').startup(function(use)
             set_keymap('n', '<Leader>fs', '<cmd>Telescope current_buffer_fuzzy_find<cr>', opts)
             set_keymap('n', '<Leader>fas', '<cmd>Telescope fuzzy_find<cr>', opts)
             set_keymap('n', '<Leader>fm', '<cmd>Telescope man_pages<cr>', opts)
+            set_keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', opts)
         end,
     }
 
