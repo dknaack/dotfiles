@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
             local opts = { noremap = true, silent = true }
 
             buf_set_keymap('n', '<Leader>gaa', '<cmd>Git add %<CR>', opts)
+            buf_set_keymap('n', '<Leader>gb', '<cmd>Git blame<CR>', opts)
         end,
     }
 
