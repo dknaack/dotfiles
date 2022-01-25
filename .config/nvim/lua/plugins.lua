@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-sensible'
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
+    use 'plasticboy/vim-markdown'
 
     use {
         'tpope/vim-fugitive',
