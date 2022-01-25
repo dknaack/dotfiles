@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
             buf_set_keymap('n', '<Leader>gg', '<cmd>Goyo<CR>', opts)
         end
     }
+    use 'tpope/vim-dispatch'
     use 'tpope/vim-sensible'
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
