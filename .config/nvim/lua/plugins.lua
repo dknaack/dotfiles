@@ -33,8 +33,6 @@ return require('packer').startup(function(use)
     use 'ziglang/zig.vim'
     use 'andviro/nim.vim'
 
-    use 'liuchengxu/vista.vim'
-
     -- alignment of '=', etc.
     use {
         'junegunn/vim-easy-align',
