@@ -45,14 +45,6 @@ return require('packer').startup(function(use)
         end,
     }
 
-    -- debugging tools
-    use {
-        'puremourning/vimspector',
-        config = function()
-            vim.g.vimspector_enable_mappings = 'HUMAN'
-        end,
-    }
-
     -- edit markdown tables using sc-im
     use {
         'mipmip/vim-scimark',
