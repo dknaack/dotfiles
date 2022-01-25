@@ -27,6 +27,7 @@ o.termguicolors = true
 -- window options
 wo.number = true
 wo.relativenumber = true
+wo.foldenable = false
 
 -- buffer options
 bo.tabstop = 4
