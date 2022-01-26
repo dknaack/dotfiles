@@ -80,6 +80,7 @@
     background = "#222222"
     foreground = "#888888"
     timeout = 10
+    script = ""
 
 [urgency_normal]
     background = "#121217"
