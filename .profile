@@ -22,6 +22,7 @@ export \
     LESSHISTFILE="-" \
     MAIL="$HOME/.local/share/mail" \
     MAILDIR="$HOME/.local/share/mail" \
+    MANWIDTH=80 \
     NOTMUCH_CONFIG="$HOME/.config/notmuch-config" \
     PASSWORD_STORE_DIR="$HOME/.local/share/password-store" \
     PASSAGE_DIR="$HOME/.local/share/passage/store" \
