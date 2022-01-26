@@ -18,17 +18,6 @@ return require('packer').startup(function(use)
     use 'tpope/vim-repeat'
     use 'plasticboy/vim-markdown'
 
-    use {
-        'tpope/vim-fugitive',
-        config = function()
-            local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-            local opts = { noremap = true, silent = true }
-
-            buf_set_keymap('n', '<Leader>gaa', '<cmd>Git add %<CR>', opts)
-            buf_set_keymap('n', '<Leader>gb', '<cmd>Git blame<CR>', opts)
-        end,
-    }
-
     use 'tikhomirov/vim-glsl'
     use 'ziglang/zig.vim'
     use 'andviro/nim.vim'
