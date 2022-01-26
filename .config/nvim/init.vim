@@ -28,6 +28,7 @@ set splitbelow splitright
 set ts=4 sw=4 sts=4 expandtab
 set number relativenumber
 set nofoldenable
+set noshowcmd
 set termguicolors
 
 colorscheme tokyodark
