@@ -58,3 +58,7 @@ require 'plugins'
 
 -- set nasm to the default syntax for assembly
 cmd('au BufRead,BufNewFile *.s set ft=nasm')
+cmd('au BufRead,BufNewFile * set cc=80')
+cmd('au BufRead,BufNewFile *.tex set spell spelllang=en')
+cmd('au BufRead,BufNewFile *.qm set ft=qm')
+cmd('source ~/.config/nvim/snippet.vim')
