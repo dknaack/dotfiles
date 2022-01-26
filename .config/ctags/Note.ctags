@@ -1,0 +1,3 @@
+--langdef=Note
+--map-Note=+.md
+--regex-Note=/^title: (.*)$/\1/t,title/
