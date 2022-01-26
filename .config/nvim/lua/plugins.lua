@@ -62,28 +62,7 @@ return require('packer').startup(function(use)
     }
 
     -- fuzzy finder
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = {
-            { 'nvim-lua/popup.nvim' },
-            { 'nvim-lua/plenary.nvim' },
-        },
-        config = function()
-            local opts = { noremap = true }
-            local function set_keymap(...)
-                vim.api.nvim_set_keymap(...)
-            end
-
-            set_keymap('n', '<Leader>ff', '<cmd>Telescope find_files<cr>', opts)
-            set_keymap('n', '<Leader>fb', '<cmd>Telescope buffers<cr>', opts)
-            set_keymap('n', '<Leader>ft', '<cmd>Telescope tags<cr>', opts)
-            set_keymap('n', '<Leader>fj', '<cmd>Telescope jumplist<cr>', opts)
-            set_keymap('n', '<Leader>fs', '<cmd>Telescope current_buffer_fuzzy_find<cr>', opts)
-            set_keymap('n', '<Leader>fas', '<cmd>Telescope fuzzy_find<cr>', opts)
-            set_keymap('n', '<Leader>fm', '<cmd>Telescope man_pages<cr>', opts)
-            set_keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', opts)
-        end,
-    }
+    use 'ctrlpvim/ctrlp.vim'
 
     -- treesitter
     use {
