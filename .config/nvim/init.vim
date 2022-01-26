@@ -20,7 +20,6 @@ set showmode
 set noruler
 set mouse=a
 set clipboard+=unnamedplus
-set encoding=utf-8
 set wildmode=longest,list,full
 set termguicolors
 set ignorecase smartcase incsearch
