@@ -9,10 +9,6 @@ Plug 'SirVer/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lewis6991/gitsigns.nvim'
-
-Plug 'plasticboy/vim-markdown'
-Plug 'tikhomirov/vim-glsl'
-Plug 'ziglang/zig.vim'
 call plug#end()
 
 set title
