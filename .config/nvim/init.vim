@@ -53,3 +53,9 @@ autocmd BufRead,BufNewFile *.tex set spell spelllang=en
 source "snippet.vim"
 
 lua require('gitsigns').setup()
+lua << EOF
+require('nvim-treesitter.configs').setup {
+    highlight = { enable = true },
+    indent = { enable = true },
+}
+EOF
