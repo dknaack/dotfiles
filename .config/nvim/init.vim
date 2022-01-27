@@ -52,7 +52,5 @@ autocmd BufRead,BufNewFile *.h set ft=c
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd FileType tex set spell spelllang=en,de
 
-source "snippet.vim"
-
 lua require('gitsigns').setup()
 lua require('nvim-treesitter.configs').setup {highlight = {enable = true}}
