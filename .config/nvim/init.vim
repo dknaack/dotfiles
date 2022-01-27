@@ -29,12 +29,15 @@ set number relativenumber
 set nofoldenable
 set noshowcmd
 set tags+=~/.config/nvim/tags
+set statusline=\ %{g:mode_string[mode()]}\ %f\ %m%=%l:%02c\ %y\ 
 
 colorscheme tokyodark
 
 let g:mapleader = ','
 let g:deoplete#enable_at_startup = 1
 let g:echodoc_enable_at_startup = 1
+let g:mode_string = { 'n': 'NORMAL ', 'v': 'VISUAL ', 'V': 'V-LINE ',
+    \ "\<C-V>": 'V-BLOCK ', 'i': 'INSERT ', 'R': 'REPLACE', 'c': 'COMMAND' }
 
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
