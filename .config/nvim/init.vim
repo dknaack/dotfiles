@@ -48,7 +48,7 @@ nmap ga <Plug>(EasyAlign)
 autocmd BufRead,BufNewFile * set cc=80
 autocmd BufRead,BufNewFile *.h set ft=c
 autocmd BufRead,BufNewFile *.s set ft=nasm
-autocmd BufRead,BufNewFile *.tex set spell spelllang=en
+autocmd FileType tex set spell spelllang=en,de
 
 source "snippet.vim"
 
