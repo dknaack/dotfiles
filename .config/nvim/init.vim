@@ -9,6 +9,10 @@ Plug 'SirVer/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/echodoc.vim'
+Plug 'deoplete-plugins/deoplete-tag'
+Plug 'deoplete-plugins/deoplete-clang'
 call plug#end()
 
 set title
@@ -25,10 +29,13 @@ set number relativenumber
 set nofoldenable
 set noshowcmd
 set termguicolors
+set tags+=~/.config/nvim/tags
 
 colorscheme tokyodark
 
 let g:mapleader = ','
+let g:deoplete#enable_at_startup = 1
+let g:echodoc_enable_at_startup = 1
 
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
