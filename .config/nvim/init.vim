@@ -55,8 +55,4 @@ autocmd FileType tex set spell spelllang=en,de
 source "snippet.vim"
 
 lua require('gitsigns').setup()
-lua << EOF
-require('nvim-treesitter.configs').setup {
-    highlight = { enable = true },
-}
-EOF
+lua require('nvim-treesitter.configs').setup {highlight = {enable = true}}
