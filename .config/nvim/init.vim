@@ -16,7 +16,7 @@ Plug 'deoplete-plugins/deoplete-clang'
 call plug#end()
 
 set title
-set showmode
+set noshowmode
 set noruler
 set mouse=a
 set clipboard+=unnamedplus
