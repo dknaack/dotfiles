@@ -4,9 +4,9 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/fzf.vim'
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'SirVer/ultisnips'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
