@@ -9,35 +9,29 @@ Plug 'tiagovla/tokyodark.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/echodoc.vim'
-Plug 'deoplete-plugins/deoplete-tag'
-Plug 'deoplete-plugins/deoplete-clang'
 call plug#end()
 
 set title
-set noshowmode
-set noruler
 set mouse=a
 set clipboard+=unnamedplus
 set wildmode=longest,list,full
+set completeopt=menuone,noinsert,noselect
 set termguicolors
 set ignorecase smartcase incsearch
 set splitbelow splitright
 set ts=4 sw=4 sts=4 expandtab
 set number relativenumber
 set nofoldenable
-set noshowcmd
-set tags+=~/.config/nvim/tags
-set statusline=\ %{g:mode_string[mode()]}\ %f\ %m%=%l:%02c\ %y\ 
+set noshowmode noshowcmd
+set complete=t,i
+set statusline=\ %7{g:mode_string[mode()]}\ \|\ %f\ %m%=%l:%02c\ %y\ 
 
 colorscheme tokyodark
 
 let g:mapleader = ','
-let g:deoplete#enable_at_startup = 1
-let g:echodoc_enable_at_startup = 1
-let g:mode_string = { 'n': 'NORMAL ', 'v': 'VISUAL ', 'V': 'V-LINE ',
-    \ "\<C-V>": 'V-BLOCK ', 'i': 'INSERT ', 'R': 'REPLACE', 'c': 'COMMAND' }
+let g:python3_host_prog = '/usr/bin/python3'
+let g:mode_string = { 'n': 'NORMAL', 'v': 'VISUAL', 'V': 'V-LINE',
+    \ "\<C-V>": 'V-BLOCK', 'i': 'INSERT', 'R': 'REPLACE', 'c': 'COMMAND' }
 
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
