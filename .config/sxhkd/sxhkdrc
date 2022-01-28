@@ -3,6 +3,8 @@ super + Return
 	$TERMINAL
 super + w
 	$BROWSER
+super + shift + w
+    chromium
 super + d
 	dmenu_run -wi 1920 -x 0 -h 32 -y 0
 super + p
