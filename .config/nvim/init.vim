@@ -41,6 +41,8 @@ nnoremap Q @q
 nnoremap Y y$
 nnoremap S :%s//g<left><left>
 nnoremap <leader>m <cmd>Make<cr>
+nnoremap <leader>nb <cmd>call NoteBacklinks()<CR>
+nnoremap <leader>ns <cmd>Files ~/notes<CR>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
@@ -48,6 +50,14 @@ autocmd BufRead,BufNewFile * set cc=80
 autocmd BufRead,BufNewFile *.h set ft=c
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd FileType tex set spell spelllang=en,de
+autocmd FileType markdown nnoremap <CR> f]hvi]g<C-]>
+autocmd FileType c set tags+=~/.config/nvim/tags
+autocmd BufWritePost notes/*.md !ctags --language-force=Note *.md
 
 lua require('gitsigns').setup()
 lua require('nvim-treesitter.configs').setup {highlight = {enable = true}}
+
+function NoteBacklinks()
+    normal m'ggj^f w"ty$''
+    execute 'Rg \[\[' . @t . '\]\]'
+endfunction
