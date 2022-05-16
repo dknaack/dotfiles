@@ -43,8 +43,10 @@ alias \
     o=xdg-open \
     p="paru" \
     sl=ls   \
-    sv="sudo $EDITOR" \
-    v="$EDITOR" \
+    sv="echo 'Use \"se\" instead'" \
+    v="echo 'Use \"e\" instead'" \
+	se="sudo $EDITOR" \
+	e="$EDITOR" \
     x=startx \
     z=zathura \
     py=ipython
