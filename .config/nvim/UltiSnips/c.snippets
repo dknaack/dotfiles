@@ -1,52 +1,52 @@
-snippet inc "#include" bA
-#include 
+snippet "^inc" "^#include" rA
+#include
 endsnippet
 
-snippet "#include as" "assert" bA
+snippet "^#include as" "assert" rA
 #include <assert.h>
 endsnippet
 
-snippet "#include io" "stdio" bA
+snippet "^#include io" "stdio" rA
 #include <stdio.h>
 endsnippet
 
-snippet "#include li" "stdlib" bA
+snippet "^#include li" "stdlib" rA
 #include <stdlib.h>
 endsnippet
 
-snippet "#include ar" "stdarg" bA
+snippet "^#include ar" "stdarg" rA
 #include <stdarg.h>
 endsnippet
 
-snippet "#include bo" "stdbool" bA
+snippet "^#include bo" "stdbool" rA
 #include <stdbool.h>
 endsnippet
 
-snippet "#include de" "stddef" bA
+snippet "^#include de" "stddef" rA
 #include <stddef.h>
 endsnippet
 
-snippet "#include st" "string" bA
+snippet "^#include st" "string" rA
 #include <string.h>
 endsnippet
 
-snippet "#include ti" "time" bA
+snippet "^#include ti" "time" rA
 #include <time.h>
 endsnippet
 
-snippet "#include un" "unistd" bA
+snippet "^#include un" "unistd" rA
 #include <unistd.h>
 endsnippet
 
-snippet "#include vk" "vulkan" bA
+snippet "^#include vk" "vulkan" rA
 #include <vulkan/vulkan.h>
 endsnippet
 
-snippet "#include ma" "math" bA 
+snippet "^#include ma" "math" rA
 #include <math.h>
 endsnippet
 
-snippet "#include in" "stdint" bA 
+snippet "^#include in" "stdint" rA
 #include <stdint.h>
 endsnippet
 
@@ -71,7 +71,7 @@ main(void)
 }
 endsnippet
 
-snippet die "die function" 
+snippet die "die function"
 void
 die(const char *fmt, ...)
 {
@@ -92,7 +92,7 @@ die(const char *fmt, ...)
 }
 endsnippet
 
-snippet ecalloc "ecalloc function" 
+snippet ecalloc "ecalloc function"
 void *
 ecalloc(size_t nmemb, size_t size)
 {
@@ -105,7 +105,7 @@ ecalloc(size_t nmemb, size_t size)
 }
 endsnippet
 
-snippet guard "header include guard" bA
+snippet '^guard' "header include guard" rA
 #ifndef $1_H
 #define $1_H
 
