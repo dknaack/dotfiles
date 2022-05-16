@@ -50,18 +50,6 @@ snippet "^#include in" "stdint" rA
 #include <stdint.h>
 endsnippet
 
-snippet '^fn' "function definition" rA
-${1:void}
-${2:function_name}(${3:void})
-{
-	${0:${VISUAL}}
-}
-endsnippet
-
-snippet '^dfn' "function declartion" rA
-${1:void} ${2:function_name}(${3:void});
-endsnippet
-
 snippet main "main" bA
 int
 main(void)
