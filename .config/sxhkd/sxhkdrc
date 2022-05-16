@@ -11,8 +11,8 @@ super + p
     passmenu
 super + x
 	quit
-super + m
-    $TERMINAL -e ncmpcpp
+super + m ; {m,p}
+    {$TERMINAL -e ncmpcpp,playerctl play-pause}
 
 # music control
 XF86Audio{Lower,Raise}Volume
