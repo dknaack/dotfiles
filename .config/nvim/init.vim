@@ -7,16 +7,13 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'jansedivy/jai.vim'
-Plug 'https://tildegit.org/sloum/gemini-vim-syntax'
-Plug 'Tetralux/odin.vim'
 Plug 'mattn/emmet-vim'
+Plug 'lervag/vimtex'
 call plug#end()
 
 set title
@@ -38,7 +35,12 @@ set errorformat^=%-G%f:%l:\ warning:%m
 
 colorscheme tokyodark
 
-let g:mapleader = ','
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:vimtex_view_method = 'zathura'
+let g:mapleader = ' '
+let g:maplocalleader = ','
 let g:python3_host_prog = '/usr/bin/python3'
 let g:mode_string = { 'n': 'NORMAL', 'v': 'VISUAL', 'V': 'V-LINE',
             \ "\<C-V>": 'V-BLOCK', 'i': 'INSERT', 'R': 'REPLACE', 'c': 'COMMAND' }
@@ -74,6 +76,7 @@ autocmd BufRead,BufNewFile * set cc=80
 autocmd BufRead,BufNewFile *.h set ft=c
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd BufRead,BufNewFile *.zig set ft=zig
+autocmd BufRead,BufNewFile *.tex set ft=tex 
 autocmd FileType tex set spell spelllang=en,de
 autocmd FileType markdown nnoremap <CR> f]hvi]g<C-]>
 autocmd FileType c set tags+=~/.config/nvim/tags
