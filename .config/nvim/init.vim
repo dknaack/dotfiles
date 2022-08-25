@@ -14,6 +14,10 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'mattn/emmet-vim'
 Plug 'lervag/vimtex'
+Plug 'neovim/nvim-lspconfig'
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 call plug#end()
 
 set title
@@ -35,9 +39,10 @@ set errorformat^=%-G%f:%l:\ warning:%m
 
 colorscheme tokyodark
 
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:vimspector_enable_mappings = 'HUMAN'
+"let g:UltiSnipsExpandTrigger = '<tab>'
+"let g:UltiSnipsJumpForwardTrigger = '<tab>'
+"let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:vimtex_view_method = 'zathura'
 let g:mapleader = ' '
 let g:maplocalleader = ','
@@ -59,8 +64,8 @@ nnoremap <C-L> <C-w><C-L>
 nnoremap Q @q
 nnoremap Y y$
 nnoremap S :%s//g<left><left>
-nnoremap <leader>m <cmd>make<cr>
-nnoremap <CR> g<C-]>
+nnoremap <leader>m <cmd>Make<cr>
+nnoremap <C-t> <cmd>Tags<cr>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 nmap H h
@@ -68,6 +73,7 @@ nmap L l
 nmap <C-p> :Files<CR>
 
 nnoremap <leader>ga :Git add %<CR>
+nnoremap <leader>grs :Git restore --staged %<CR>
 nnoremap <leader>gcc :Git commit<CR>
 nnoremap <leader>gca :Git commit --amend<CR>
 nnoremap <leader>gs :Git status<CR>
@@ -77,10 +83,10 @@ autocmd BufRead,BufNewFile *.h set ft=c
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd BufRead,BufNewFile *.zig set ft=zig
 autocmd BufRead,BufNewFile *.tex set ft=tex 
-autocmd FileType tex set spell spelllang=en,de
+autocmd FileType tex set spell spelllang=en,de et ts=4 sw=4
 autocmd FileType markdown nnoremap <CR> f]hvi]g<C-]>
-autocmd FileType c set tags+=~/.config/nvim/tags
-autocmd FileType javascript setlocal et ts=2 sw=2
+autocmd FileType javascript,dart setlocal et ts=2 sw=2
+autocmd FileType python set et ts=4 sw=4
 autocmd VimLeave ~/notes/*.md silent !make &
 autocmd BufWritePre *.{c,h,cpp} :%s/\s\+$//e
 
@@ -91,3 +97,10 @@ augroup vimrc_help
   autocmd!
   autocmd BufEnter *.txt if &buftype == 'help' | wincmd L | endif
 augroup END
+
+lua <<EOF
+local lsp = require 'lspconfig'
+local coq = require 'coq'
+
+lsp.dartls.setup(coq.lsp_ensure_capabilities {})
+EOF
