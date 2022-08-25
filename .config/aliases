@@ -21,7 +21,8 @@ alias \
     sml='rlwrap sml' \
     neuron="neuron -d $HOME/notes/" \
     minecraft="env DRI_PRIME=1 minecraft-launcher --workDir \"$XDG_DATA_HOME/minecraft\"" \
-    wget="wget --hsts-file=$XDG_CACHE_HOME/.wget-hsts"
+    wget="wget --hsts-file=$XDG_CACHE_HOME/.wget-hsts" \
+	gdb="gdb -q"
 
 # Shortcuts
 alias \
