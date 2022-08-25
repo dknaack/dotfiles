@@ -66,6 +66,10 @@ snippet "^#include ct" "ctype" rA
 #include <ctype.h>
 endsnippet
 
+snippet "^#include dl" "dlfcn" rA
+#include <dlfcn.h>
+endsnippet
+
 snippet '^main' "main" rA
 int
 main(void)
@@ -147,21 +151,52 @@ snippet LENGTH "length macro" w
 #define LENGTH(x) (sizeof(x)/sizeof((x)[0]))
 endsnippet
 
+snippet ABS "abs macro" w
+#define ABS(x) ((x) < 0 ? -(x) : (x))
+endsnippet
+
+snippet SIGN "sign macro" w
+#define SIGN(x) ((x) < 0 ? -1 : 1)
+endsnippet
+
+snippet CLAMP "clamp macro" w
+#define CLAMP(x, a, b) MAX((a), MIN((b), (x)))
+endsnippet
+
+snippet CLAMP01 "clamp01 macro" w
+#define CLAMP01(x) CLAMP((x), 0, 1)
+endsnippet
+
 snippet types "short types" w
 #include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
 
-typedef uint64_t u64;
-typedef uint32_t u32;
-typedef uint16_t u16;
-typedef uint8_t  u8;
+typedef uintptr_t usize;
+typedef uint64_t  u64;
+typedef uint32_t  u32;
+typedef uint16_t  u16;
+typedef uint8_t   u8;
 
-typedef int64_t i64;
-typedef int32_t i32;
-typedef int16_t i16;
-typedef int8_t  i8;
+typedef intptr_t isize;
+typedef int64_t  i64;
+typedef int32_t  i32;
+typedef int16_t  i16;
+typedef int8_t   i8;
 
 typedef double f64;
 typedef float  f32;
+endsnippet
+
+snippet c_types "short hand typedefs for regular c types" b
+typedef long long llong;
+typedef signed char schar;
+
+typedef unsigned char uchar;
+typedef unsigned short ushort;
+typedef unsigned int uint;
+typedef unsigned long ulong;
+typedef unsigned long long ullong;
 endsnippet
 
 snippet _fast "fast for cp" bA
@@ -206,5 +241,82 @@ hash(const char *str)
 	}
 
 	return hash;
+}
+endsnippet
+
+snippet read_file "read a file"
+void *
+read_file(const char *filename, size_t *size)
+{
+	char *buffer = 0;
+	FILE *file = fopen(filename, "rb");
+	if (file) {
+		fseek(file, 0, SEEK_END);
+		*size = ftell(file);
+		fseek(file, 0, SEEK_SET);
+
+		buffer = calloc(*size + 1, 1);
+		if (buffer) {
+			fread(buffer, *size, 1, file);
+			buffer[*size] = '\0';
+		}
+
+		fclose(file);
+	}
+
+	return buffer;
+}
+endsnippet
+
+snippet gl_program_create "Utility function for creating OpenGL programs" 
+${1:static }unsigned int
+gl_shader_create(const char *src, GLenum type)
+{
+	unsigned int shader = glCreateShader(type);
+	glShaderSource(shader, 1, &src, 0);
+	glCompileShader(shader);
+
+	int success;
+	glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
+	if (!success) {
+		char info[1024];
+		glGetShaderInfoLog(shader, sizeof(info), 0, info);
+		fprintf(stderr, "gl_shader_create: %s\n", info);
+	}
+
+	return shader;
+}
+
+$1unsigned int
+gl_program_create(const char *vs, const char *fs)
+{
+	unsigned int vertex_shader = gl_shader_create(vs, GL_VERTEX_SHADER);
+	if (vertex_shader) {
+		return 0;
+	}
+
+	unsigned int fragment_shader = gl_shader_create(fs, GL_FRAGMENT_SHADER);
+	if (!fragment_shader) {
+		glDeleteShader(vertex_shader);
+		return 0;
+	}
+
+	unsigned int program = glCreateProgram();
+	glAttachShader(program, vertex_shader);
+	glAttachShader(program, fragment_shader);
+	glLinkProgram(program);
+
+	glDeleteShader(vertex_shader);
+	glDeleteShader(fragment_shader);
+
+	int success;
+	glGetProgramiv(program, GL_LINK_STATUS, &success);
+	if (!success) {
+		char info[1024];
+		glGetProgramInfoLog(program, sizeof(info), 0, info);
+		fprintf(stderr, "gl_program_create: %s\n", info);
+	}
+
+	return program;
 }
 endsnippet
