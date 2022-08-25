@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="$HOME/.local/bin:$HOME/.local/bin/statusbar/:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.local/bin/statusbar/:$PATH:$HOME/etc/android/cmdline-tools/latest/bin/:$HOME/etc/repos/flutter/bin/"
 
 # XDG base directories
 export \
@@ -19,7 +19,9 @@ export \
 
 # env variables to keep programs from putting random stuff inside $HOME
 export \
-	ANDROID_AVD_HOME="$HOME/etc/android-studio" \
+	ANDROID_AVD_HOME="$HOME/etc/android/avd" \
+	ANDROID_HOME="$HOME/etc/android" \
+	ANDROID_SDK_ROOT="$HOME/etc/android/sdk" \
     CARGO_HOME="$HOME/.local/share/cargo" \
     CCACHE_DIR="$HOME/.cache/ccache/" \
 	GDBHISTFILE="$XDG_DATA_HOME/gdb/history" \
@@ -59,6 +61,7 @@ export \
 # Misc settings
 export \
     MANWIDTH=80 \
+	CHROME_EXECUTABLE="/usr/bin/chromium" \
 	XKB_DEFAULT_LAYOUT="us" \
 	XKB_DEFAULT_VARIANT="altgr-intl" \
     _JAVA_AWT_WM_NONREPARENTING=1
