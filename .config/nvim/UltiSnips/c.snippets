@@ -126,13 +126,13 @@ if len(t[1]) > 0:
 endsnippet
 
 snippet inttypes "int typedefs" w
-typedef uintptr_t usize;
+typedef uintptr_t usz;
 typedef uint64_t u64;
 typedef uint32_t u32;
 typedef uint16_t u16;
 typedef uint8_t  u8;
 
-typedef intptr_t isize;
+typedef intptr_t isz;
 typedef int64_t i64;
 typedef int32_t i32;
 typedef int16_t i16;
@@ -268,8 +268,27 @@ read_file(const char *filename, size_t *size)
 }
 endsnippet
 
-snippet gl_program_create "Utility function for creating OpenGL programs" 
-${1:static }unsigned int
+snippet write_file "function for writing to a file"
+bool
+write_file(const char *filename, void *data, size_t size)
+{
+	bool result = false;
+
+	FILE *file = fopen(filename, "w");
+	if (file) {
+		if (fwrite(data, 1, size, file) == size) {
+			result = true;
+		}
+
+		fclose(file);
+	}
+
+	return result;
+}
+endsnippet
+
+snippet gl_shader_create "Utility function for creating OpenGL shaders" 
+unsigned int
 gl_shader_create(const char *src, GLenum type)
 {
 	unsigned int shader = glCreateShader(type);
@@ -286,8 +305,10 @@ gl_shader_create(const char *src, GLenum type)
 
 	return shader;
 }
+endsnippet
 
-$1unsigned int
+snippet gl_program_create "Utility function for creating OpenGL programs" 
+unsigned int
 gl_program_create(const char *vs, const char *fs)
 {
 	unsigned int vertex_shader = gl_shader_create(vs, GL_VERTEX_SHADER);
@@ -319,4 +340,40 @@ gl_program_create(const char *vs, const char *fs)
 
 	return program;
 }
+endsnippet
+
+snippet string "data type for string"
+typedef struct string {
+	char *at;
+	${1:size_t} length;
+} string;
+endsnippet
+
+snippet string_length "macro for the length of a string" 
+${1:size_t}
+string_length(char *at)
+{
+	$1 length = 0;
+
+	while (at[length]) {
+		length++;
+	}
+
+	return length;
+}
+endsnippet
+
+snippet assert "Alternative assert for debugging" 
+#define assert(expr) ((expr) ? (void)0 : (void)(*(volatile int *)0 = 0))
+endsnippet
+
+snippet assert_gcc "Alternative assert for debugging" 
+#define assert(expr) ((expr) ? (void)0 : (void)__builtin_trap())
+endsnippet
+
+snippet KB "macros for kilobytes, megabytes, etc." 
+#define KB(x)   ((x) * 1024)
+#define MB(x) (KB(x) * 1024)
+#define GB(x) (MB(x) * 1024)
+#define TB(x) (GB(x) * 1024)
 endsnippet
