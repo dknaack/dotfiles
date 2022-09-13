@@ -7,10 +7,6 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # Include hidden files
 
-# Path
-path=("$HOME/.scripts/" "$HOME/.local/bin/" "$HOME/.local/bin/dat/releases/dat-13.13.1-linux-x64" "$path[@]")
-path+=("$HOME/.gem/ruby/2.6.0/bin/")
-
 # History
 HISTSIZE=10000
 SAVEHIST=10000
