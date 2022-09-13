@@ -4,7 +4,7 @@
 alias \
     cp="cp -iv" \
     mv="mv -iv" \
-    rm="rm -iv"  \
+    rm="trash"  \
     grep="grep --color=auto" \
     ls="exa -Fh --color=auto --group-directories-first" \
     mkd="mkdir -pv" \
