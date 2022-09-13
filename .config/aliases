@@ -9,25 +9,15 @@ alias \
     ls="exa -Fh --color=auto --group-directories-first" \
     mkd="mkdir -pv" \
     diff="diff --color=auto" \
-    surf="tabbed -c surf -e" \
     cfg='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME' \
-    cal='cal -m' \
-    remind='remind -m -b1' \
-    rem='rem -m -b1' \
-    nohup='>/dev/null nohup' \
-    mbsync="mbsync -c $HOME/.config/mbsyncrc" \
     df='df -h' \
     du='du -h' \
-    sml='rlwrap sml' \
-    neuron="neuron -d $HOME/notes/" \
     minecraft="env DRI_PRIME=1 minecraft-launcher --workDir \"$XDG_DATA_HOME/minecraft\"" \
     wget="wget --hsts-file=$XDG_CACHE_HOME/.wget-hsts" \
 	gdb="gdb -q"
 
 # Shortcuts
 alias \
-    ...="cd ../.." \
-    ..="cd .." \
     SS="sudo systemctl" \
     SU="systemctl --user" \
     g=git \
@@ -39,15 +29,9 @@ alias \
     la="ls -a" \
     ll="ls -al" \
     mutt=neomutt \
-    n=neuron \
-    nb=newsboat \
-    o=xdg-open \
-    p="paru" \
+    p=paru \
     sl=ls   \
-    sv="echo 'Use \"se\" instead'" \
-    v="echo 'Use \"e\" instead'" \
 	se="sudo $EDITOR" \
 	e="$EDITOR" \
-    x=startx \
     z=zathura \
     py=ipython
