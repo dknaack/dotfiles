@@ -82,7 +82,8 @@ autocmd BufRead,BufNewFile * set cc=80
 autocmd BufRead,BufNewFile *.h set ft=c
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd BufRead,BufNewFile *.zig set ft=zig
-autocmd BufRead,BufNewFile *.tex set ft=tex 
+autocmd BufRead,BufNewFile *.tex set ft=tex
+autocmd BufRead,BufNewFile latexmkrc set ft=perl
 autocmd FileType tex set spell spelllang=en,de et ts=4 sw=4
 autocmd FileType markdown nnoremap <CR> f]hvi]g<C-]>
 autocmd FileType javascript,dart setlocal et ts=2 sw=2
