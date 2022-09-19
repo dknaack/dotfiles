@@ -24,7 +24,7 @@ alias \
     gd="git diff" \
     gl="git log" \
     gs="git status" \
-    iv=sxiv \
+    iv=nsxiv \
     ka=killall \
     la="ls -a" \
     ll="ls -al" \
