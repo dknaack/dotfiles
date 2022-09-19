@@ -36,6 +36,7 @@ set cinoptions=:0,t0,(4,Ws,k8,m1,N-s,l4,g0
 set list listchars=trail:·,tab:\ \ ,nbsp:␣
 set nu rnu
 set errorformat^=%-G%f:%l:\ warning:%m
+set makeprg=mk
 
 colorscheme tokyodark
 
