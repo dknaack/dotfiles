@@ -1,11 +1,11 @@
 #!/bin/sh
 
 if [ -f Makefile ]; then
-	make
+	make $@
 elif [ -f latexmkrc ] || [ -f .latexmkrc ]; then
-	latexmk
+	latexmk $@
 elif [ -f build.sh ]; then
-	./build.sh
+	./build.sh $@
 else
 	echo No suitable build file found
 	exit 1
