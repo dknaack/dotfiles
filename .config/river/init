@@ -2,9 +2,10 @@
 
 layout="rivercarro"
 
-wlr-randr --output VGA-1 --transform 270
-wlr-randr --output HDMI-A-1 --pos 900,300
-wlr-randr --output DVI-D-2 --off
+if [ "x$(hostname)" = "xarchlinux-desktop" ]; then
+	wlr-randr --output DVI-D-1 --transform 270
+	wlr-randr --output DVI-D-2 --preferred --pos 900,300
+fi
 
 riverctl spawn waybar
 riverctl spawn river-tag-overlay
