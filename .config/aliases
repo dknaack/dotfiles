@@ -6,7 +6,7 @@ alias \
     mv="mv -iv" \
     rm="trash"  \
     grep="grep --color=auto" \
-    ls="exa -Fh --color=auto --group-directories-first" \
+    ls="ls -Fh --color=auto --group-directories-first" \
     mkd="mkdir -pv" \
     diff="diff --color=auto" \
     cfg='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME' \
