@@ -1,6 +1,6 @@
 # basic key bindigns
 super + Return
-	$TERMINAL
+	st
 super + w
 	$BROWSER
 super + shift + w
@@ -12,7 +12,7 @@ super + p
 super + x
 	quit
 super + m ; {m,p}
-    {$TERMINAL -e ncmpcpp,playerctl play-pause}
+    {st -e ncmpcpp,playerctl play-pause}
 
 # music control
 XF86Audio{Lower,Raise}Volume
