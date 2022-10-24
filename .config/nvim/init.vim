@@ -13,11 +13,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'mattn/emmet-vim'
-Plug 'lervag/vimtex'
-Plug 'neovim/nvim-lspconfig'
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 set title
