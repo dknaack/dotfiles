@@ -6,7 +6,7 @@ super + w
 super + shift + w
     chromium
 super + d
-	dmenu_run -wi 1920 -x 0 -h 32 -y 0
+	dmenu_run
 super + p
     passmenu
 super + x
