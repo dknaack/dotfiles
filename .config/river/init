@@ -10,6 +10,8 @@ fi
 riverctl spawn waybar
 riverctl spawn river-tag-overlay
 riverctl spawn mako
+riverctl spawn mpDris2
+riverctl spawn signal-desktop
 riverctl spawn "swaybg -m fill -i $HOME/pics/wallpaper.jpg"
 riverctl send-layout-cmd rivertile "main-location top"
 riverctl focus-output next
