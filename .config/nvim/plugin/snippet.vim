@@ -1,6 +1,6 @@
 augroup ultisnips_custom
     autocmd!
-    autocmd BufNewFile ~/notes/*.md silent! call snippet#InsertSkeleton()
+    autocmd BufNewFile ~/docs/notes/*.md silent! call snippet#InsertSkeleton()
 augroup END
 
 function! s:try_insert(skel)
@@ -24,7 +24,7 @@ function! snippet#InsertSkeleton() abort
 endfunction
 
 function! snippet#Create(name) abort
-    let filename = '~/notes/' . join(split(tolower(a:name)), "-") . ".md"
+    let filename = '~/docs/notes/' . join(split(tolower(a:name)), "-") . ".md"
 
     execute "edit " . l:filename
     call feedkeys(a:name . "\<C-r>=UltiSnips#JumpForwards()\<CR>", 'n')
