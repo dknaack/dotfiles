@@ -68,6 +68,6 @@ export \
     _JAVA_AWT_WM_NONREPARENTING=1
 
 if [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x river >/dev/null; then
-    echo 'Starting river...'
-	river
+    echo 'Starting X11...'
+	startx
 fi
