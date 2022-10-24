@@ -40,6 +40,7 @@ export \
     LESSHISTFILE="-" \
     MAIL="$HOME/.local/share/mail" \
     MAILDIR="$HOME/.local/share/mail" \
+	MAKEFLAGS="-j$(nproc)" \
     NOTMUCH_CONFIG="$HOME/.config/notmuch-config" \
     PASSAGE_DIR="$HOME/.local/share/passage/store" \
     PASSAGE_IDENTITIES_FILE="$HOME/.local/share/passage/identities" \
