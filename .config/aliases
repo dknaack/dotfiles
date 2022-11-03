@@ -9,7 +9,7 @@ alias \
     ls="ls -Fh --color=auto --group-directories-first" \
     mkd="mkdir -pv" \
     diff="diff --color=auto" \
-    cfg='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME' \
+    cfg='git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME' \
     df='df -h' \
     du='du -h' \
     minecraft="env DRI_PRIME=1 minecraft-launcher --workDir \"$XDG_DATA_HOME/minecraft\"" \
