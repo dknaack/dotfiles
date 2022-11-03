@@ -1,0 +1,12 @@
+#!/bin/sh
+
+prompt() {
+	cmd="$(dmenu)"
+	[ "$(printf "Yes\nNo" | dmenu -p "$cmd?")" = "Yes" ] && echo "$cmd"
+}
+
+case "$(printf "poweroff\nreboot\nlogout" | prompt)" in
+	poweroff) poweroff;;
+	reboot) reboot;;
+	logout) pkill xinit;;
+esac
