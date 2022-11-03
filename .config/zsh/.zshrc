@@ -16,7 +16,7 @@ HISTFILE="$HOME/.cache/zsh/history"
 setopt noclobber
 setopt autocd
 
-source "${XDG_CONFIG_HOME:-$HOME/.config}/aliases" 
+source "${XDG_CONFIG_HOME:-$HOME/.config}/sh/aliasrc" 
 source "${XDG_CONFIG_HOME:-$HOME/.config}/functions" 
 
 # Change cursor shape
