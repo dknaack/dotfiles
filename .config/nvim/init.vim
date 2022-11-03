@@ -60,7 +60,6 @@ nnoremap <C-K> <C-w><C-K>
 nnoremap <C-L> <C-w><C-L>
 nnoremap Q @q
 nnoremap Y y$
-nnoremap S :%s//g<left><left>
 nnoremap <leader>m <cmd>Make<cr>
 nnoremap <C-t> <cmd>Tags<cr>
 xmap ga <Plug>(EasyAlign)
