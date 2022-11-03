@@ -19,9 +19,6 @@ export \
 
 # env variables to keep programs from putting random stuff inside $HOME
 export \
-	ANDROID_AVD_HOME="$HOME/etc/android/avd" \
-	ANDROID_HOME="$HOME/etc/android" \
-	ANDROID_SDK_ROOT="$HOME/etc/android/sdk" \
     CARGO_HOME="$HOME/.local/share/cargo" \
     CCACHE_DIR="$HOME/.cache/ccache/" \
 	GDBHISTFILE="$XDG_DATA_HOME/gdb/history" \
