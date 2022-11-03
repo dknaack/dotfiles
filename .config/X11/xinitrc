@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Display configuration
-if [ "$(hostname)" = "arch-desktop" ]; then
-    xrandr --output VGA1 \
+if [ "$(hostname)" = "archlinux-desktop" ]; then
+	xrandr --output DVI-D-0 \
             --mode 1440x900 \
             --pos 0x0 \
             --rotate right \
