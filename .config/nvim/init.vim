@@ -75,7 +75,6 @@ nnoremap <leader>gca :Git commit --amend<CR>
 nnoremap <leader>gs :Git status<CR>
 
 autocmd BufRead,BufNewFile * set cc=80
-autocmd BufRead,BufNewFile *.h set ft=c
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd BufRead,BufNewFile *.zig set ft=zig
 autocmd BufRead,BufNewFile *.tex set ft=tex
