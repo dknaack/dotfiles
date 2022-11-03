@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="$HOME/.local/bin:$HOME/.local/bin/statusbar/:$PATH:$HOME/etc/android/cmdline-tools/latest/bin/:$HOME/etc/repos/flutter/bin/"
+export PATH="$HOME/.local/bin:$PATH:$HOME/.local/share/cargo/bin/"
 
 # XDG base directories
 export \
