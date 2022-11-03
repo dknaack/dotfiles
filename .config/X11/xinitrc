@@ -44,6 +44,7 @@ slstatus &
 unclutter &
 sxhkd &
 discord &
+signal-desktop &
 feh --no-fehbg --bg-fill "$HOME/pics/wallpaper.jpg" &
 
 exec dwm-start
