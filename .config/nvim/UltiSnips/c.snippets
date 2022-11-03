@@ -312,13 +312,15 @@ unsigned int
 gl_program_create(const char *vs, const char *fs)
 {
 	unsigned int vertex_shader = gl_shader_create(vs, GL_VERTEX_SHADER);
-	if (vertex_shader) {
+	if (!vertex_shader) {
+		assert(!"Invalid vertex shader");
 		return 0;
 	}
 
 	unsigned int fragment_shader = gl_shader_create(fs, GL_FRAGMENT_SHADER);
 	if (!fragment_shader) {
 		glDeleteShader(vertex_shader);
+		assert(!"Invalid fragment shader");
 		return 0;
 	}
 
