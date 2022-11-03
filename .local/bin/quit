@@ -2,6 +2,7 @@
 
 prompt() {
 	cmd="$(dmenu)"
+	[ -z "$cmd" ] && return
 	[ "$(printf "Yes\nNo" | dmenu -p "$cmd?")" = "Yes" ] && echo "$cmd"
 }
 
