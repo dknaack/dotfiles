@@ -2,25 +2,24 @@
 
 # Default options
 alias \
-    cp="cp -iv" \
-    mv="mv -iv" \
-    rm="trash"  \
-    grep="grep --color=auto" \
     ls="ls -Fh --color=auto --group-directories-first" \
-    mkd="mkdir -pv" \
-    diff="diff --color=auto" \
-    cfg='git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME' \
+	diff="diff --color=auto" \
+    grep="grep --color=auto" \
+	ip="ip -color=auto" \
+	gdb="gdb -q" \
+    cp="cp -iv" \
     df='df -h' \
     du='du -h' \
-    minecraft="env DRI_PRIME=1 minecraft-launcher --workDir \"$XDG_DATA_HOME/minecraft\"" \
-    wget="wget --hsts-file=$XDG_CACHE_HOME/.wget-hsts" \
-	gdb="gdb -q"
+    mv="mv -iv" \
+    rm="trash"  \
+    minecraft='env DRI_PRIME=1 minecraft-launcher --workDir "$XDG_DATA_HOME/minecraft\"' \
+    cfg='git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME' \
 
 # Shortcuts
 alias \
     SS="doas systemctl" \
     SU="systemctl --user" \
-    g=git \
+    g="git" \
     gd="git diff" \
     gl="git log" \
     gs="git status" \
@@ -28,10 +27,10 @@ alias \
     ka=killall \
     la="ls -a" \
     ll="ls -al" \
-    mutt=neomutt \
-    p=paru \
-    sl=ls \
+    mutt="neomutt" \
+    p="paru" \
+    sl="ls" \
 	se="doas $EDITOR" \
 	e="$EDITOR" \
-    z=zathura \
-    py=ipython
+    z="zathura" \
+    py="ipython"
