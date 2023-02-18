@@ -60,6 +60,7 @@ export \
 export \
     MANWIDTH=80 \
 	CHROME_EXECUTABLE="/usr/bin/chromium" \
+	FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix" \
 	XKB_DEFAULT_LAYOUT="us" \
 	XKB_DEFAULT_VARIANT="altgr-intl" \
     _JAVA_AWT_WM_NONREPARENTING=1
