@@ -34,11 +34,9 @@ set makeprg=mk
 
 colorscheme tokyodark
 
-let g:vimspector_enable_mappings = 'HUMAN'
 "let g:UltiSnipsExpandTrigger = '<tab>'
 "let g:UltiSnipsJumpForwardTrigger = '<tab>'
 "let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-let g:vimtex_view_method = 'zathura'
 let g:mapleader = ' '
 let g:maplocalleader = ','
 let g:python3_host_prog = '/usr/bin/python3'
