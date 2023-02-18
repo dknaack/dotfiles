@@ -94,3 +94,6 @@ fun! TrimWhitespace()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
+
+lua vim.diagnostic.config({ virtual_text = true })
+lua require('dqf').setup()
