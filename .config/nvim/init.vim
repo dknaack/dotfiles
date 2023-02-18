@@ -75,9 +75,9 @@ autocmd BufRead,BufNewFile * set cc=80
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd BufRead,BufNewFile *.zig set ft=zig
 autocmd BufRead,BufNewFile *.meta set ft=meta
-autocmd BufRead,BufNewFile latexmkrc set ft=perl
-autocmd FileType tex set spell spelllang=en,de et ts=4 sw=4
-autocmd FileType markdown nnoremap <CR> f]hvi]g<C-]>
+
+autocmd FileType c set noet ts=8 sw=8
+autocmd FileType tex set spell spelllang=en,de et ts=2 sw=2
 autocmd FileType markdown setlocal tw=80 et ts=2 sw=2
 autocmd FileType javascript,dart setlocal et ts=2 sw=2
 autocmd FileType python set et ts=4 sw=4
