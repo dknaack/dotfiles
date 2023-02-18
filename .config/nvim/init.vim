@@ -64,7 +64,7 @@ nmap H h
 nmap L l
 nmap <C-p> :Files<CR>
 
-nnoremap <leader>ga :Git add %<CR>
+nnoremap <leader>ga  :Git add %<CR>
 nnoremap <leader>grs :Git restore --staged %<CR>
 nnoremap <leader>gcc :Git commit<CR>
 nnoremap <leader>gca :Git commit --amend<CR>
