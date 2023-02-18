@@ -84,9 +84,6 @@ autocmd FileType python set et ts=4 sw=4
 autocmd VimLeave ~/notes/*.md silent !make &
 autocmd BufWritePre *.{c,h,cpp} :%s/\s\+$//e
 
-lua require('gitsigns').setup()
-lua require('nvim-treesitter.configs').setup {highlight = {enable = true}}
-
 augroup vimrc_help
   autocmd!
   autocmd BufEnter *.txt if &buftype == 'help' | wincmd L | endif
