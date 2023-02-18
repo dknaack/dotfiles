@@ -34,9 +34,9 @@ set makeprg=mk
 
 colorscheme tokyodark
 
-"let g:UltiSnipsExpandTrigger = '<tab>'
-"let g:UltiSnipsJumpForwardTrigger = '<tab>'
-"let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:mapleader = ' '
 let g:maplocalleader = ','
 let g:python3_host_prog = '/usr/bin/python3'
