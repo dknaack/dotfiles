@@ -2,25 +2,8 @@
 
 # Display configuration
 if [ "$(hostname)" = "archlinux-desktop" ]; then
-	xrandr --output DVI-D-0 \
-            --mode 1440x900 \
-            --pos 0x0 \
-            --rotate right \
-            --output HDMI1 \
-            --primary \
-            --mode 1920x1080 \
-            --pos 900x320 \
-            --rotate normal
-
-    #xrandr \
-    #    --output DisplayPort-1 --off \
-    #    --output HDMI-A-1 --off \
-    #    --output DVI-D-0 --off \
-    #    --output DVI-D-1 --mode 1920x1080 --pos 900x296 --rotate normal \
-    #    --output DP1 --off \
-    #    --output HDMI1 --off \
-    #    --output VGA1 --mode 1440x900 --pos 0x0 --rotate right \
-    #    --output VIRTUAL1 --off
+	xrandr --output DVI-D-0 --mode 1440x900 --pos 0x0 --rotate right \
+		--output DVI-D-1 --mode 1920x1080 --pos 900x320 --rotate normal --primary
 fi
 
 gdmauth=$XAUTHORITY
