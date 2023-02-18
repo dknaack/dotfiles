@@ -74,7 +74,6 @@ nnoremap <F5> :Make<CR>
 autocmd BufRead,BufNewFile * set cc=80
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd BufRead,BufNewFile *.zig set ft=zig
-autocmd BufRead,BufNewFile *.tex set ft=tex
 autocmd BufRead,BufNewFile *.meta set ft=meta
 autocmd BufRead,BufNewFile latexmkrc set ft=perl
 autocmd FileType tex set spell spelllang=en,de et ts=4 sw=4
