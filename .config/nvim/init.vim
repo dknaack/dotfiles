@@ -70,7 +70,8 @@ nnoremap <leader>ga :Git add %<CR>
 nnoremap <leader>grs :Git restore --staged %<CR>
 nnoremap <leader>gcc :Git commit<CR>
 nnoremap <leader>gca :Git commit --amend<CR>
-nnoremap <leader>gs :Git status<CR>
+nnoremap <leader>gs  :Git status<CR>
+nnoremap <F5> :Make<CR>
 
 autocmd BufRead,BufNewFile * set cc=80
 autocmd BufRead,BufNewFile *.s set ft=nasm
