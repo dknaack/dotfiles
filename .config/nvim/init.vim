@@ -9,9 +9,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf.vim'
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'SirVer/ultisnips'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'dhruvasagar/vim-table-mode'
 Plug 'mattn/emmet-vim'
 Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
