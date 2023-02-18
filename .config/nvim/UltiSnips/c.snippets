@@ -291,7 +291,7 @@ write_file(const char *filename, void *data, size_t size)
 }
 endsnippet
 
-snippet gl_shader_create "Utility function for creating OpenGL shaders" 
+snippet gl_shader_create "Utility function for creating OpenGL shaders"
 unsigned int
 gl_shader_create(const char *src, GLenum type)
 {
@@ -311,7 +311,7 @@ gl_shader_create(const char *src, GLenum type)
 }
 endsnippet
 
-snippet gl_program_create "Utility function for creating OpenGL programs" 
+snippet gl_program_create "Utility function for creating OpenGL programs"
 unsigned int
 gl_program_create(const char *vs, const char *fs)
 {
@@ -355,7 +355,7 @@ typedef struct string {
 } string;
 endsnippet
 
-snippet string_length "macro for the length of a string" 
+snippet string_length "macro for the length of a string"
 ${1:size_t}
 string_length(char *at)
 {
@@ -369,15 +369,15 @@ string_length(char *at)
 }
 endsnippet
 
-snippet assert "Alternative assert for debugging" 
+snippet assert "Alternative assert for debugging"
 #define assert(expr) ((expr) ? (void)0 : (void)(*(volatile int *)0 = 0))
 endsnippet
 
-snippet assert_gcc "Alternative assert for debugging" 
+snippet assert_gcc "Alternative assert for debugging"
 #define assert(expr) ((expr) ? (void)0 : (void)__builtin_trap())
 endsnippet
 
-snippet KB "macros for kilobytes, megabytes, etc." 
+snippet KB "macros for kilobytes, megabytes, etc."
 #define KB(x)   ((x) * 1024)
 #define MB(x) (KB(x) * 1024)
 #define GB(x) (MB(x) * 1024)
