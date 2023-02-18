@@ -81,10 +81,16 @@ autocmd FileType tex set spell spelllang=en,de et ts=2 sw=2
 autocmd FileType markdown setlocal tw=80 et ts=2 sw=2
 autocmd FileType javascript,dart setlocal et ts=2 sw=2
 autocmd FileType python set et ts=4 sw=4
-autocmd VimLeave ~/notes/*.md silent !make &
-autocmd BufWritePre *.{c,h,cpp} :%s/\s\+$//e
 
 augroup vimrc_help
   autocmd!
   autocmd BufEnter *.txt if &buftype == 'help' | wincmd L | endif
 augroup END
+
+nnoremap <F3> :call TrimWhitespace()<CR>
+autocmd BufWritePre * call TrimWhitespace()
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
