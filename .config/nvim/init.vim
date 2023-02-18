@@ -11,6 +11,7 @@ Plug 'tiagovla/tokyodark.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 set title
