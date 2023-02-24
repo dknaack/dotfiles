@@ -1,8 +1,7 @@
 call plug#begin()
 Plug 'nvim-lua/plenary.nvim'
 Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
+Plug 'kylechui/nvim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/vim-easy-align'
