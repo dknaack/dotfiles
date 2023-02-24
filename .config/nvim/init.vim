@@ -38,7 +38,7 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:mapleader = ' '
 let g:mode_string = { 'n': 'NORMAL', 'v': 'VISUAL', 'V': 'V-LINE',
-            \ "\<C-V>": 'V-BLOCK', 'i': 'INSERT', 'R': 'REPLACE', 'c': 'COMMAND' }
+	\ "\<C-V>": 'V-BLOCK', 'i': 'INSERT', 'R': 'REPLACE', 'c': 'COMMAND' }
 let g:easy_align_delimiters = { '\': { 'pattern': '\\$' } }
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
