@@ -13,6 +13,7 @@ Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 set title mouse=a clipboard+=unnamedplus
+set linebreak
 set wildmode=longest,list,full
 set complete=t,i completeopt=menuone,noinsert,noselect
 set termguicolors
