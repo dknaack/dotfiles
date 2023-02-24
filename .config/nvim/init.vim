@@ -29,6 +29,9 @@ set errorformat^=%-G%f:%l:\ warning:%m
 set makeprg=mk
 
 colorscheme tokyodark
+lua vim.diagnostic.config({ virtual_text = true })
+lua require('dqf').setup()
+lua require('nvim-surround').setup()
 
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
@@ -91,6 +94,3 @@ fun! TrimWhitespace()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
-
-lua vim.diagnostic.config({ virtual_text = true })
-lua require('dqf').setup()
