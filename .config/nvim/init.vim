@@ -71,12 +71,7 @@ autocmd FileType c,cpp setlocal noet ts=8 sw=8 | comp! gcc
 autocmd FileType tex setlocal spell spelllang=en,de et ts=2 sw=2 cc=0
 autocmd FileType markdown setlocal tw=80 et ts=2 sw=2
 autocmd FileType javascript,dart setlocal et ts=2 sw=2
-autocmd FileType python set et ts=4 sw=4
-
-augroup vimrc_help
-  autocmd!
-  autocmd BufEnter *.txt if &buftype == 'help' | wincmd L | endif
-augroup END
+autocmd FileType python setlocal et ts=4 sw=4
 
 nnoremap <F3> :call TrimWhitespace()<CR>
 autocmd BufWritePre * call TrimWhitespace()
