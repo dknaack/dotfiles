@@ -37,8 +37,6 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:mapleader = ' '
-let g:maplocalleader = ','
-let g:python3_host_prog = '/usr/bin/python3'
 let g:mode_string = { 'n': 'NORMAL', 'v': 'VISUAL', 'V': 'V-LINE',
             \ "\<C-V>": 'V-BLOCK', 'i': 'INSERT', 'R': 'REPLACE', 'c': 'COMMAND' }
 let g:easy_align_delimiters = { '\': { 'pattern': '\\$' } }
