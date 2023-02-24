@@ -5,7 +5,7 @@ Plug 'kylechui/nvim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
@@ -56,12 +56,13 @@ nnoremap <C-L> <C-w><C-L>
 nnoremap Q @q
 nnoremap Y y$
 nnoremap <leader>m <cmd>Make<cr>
-nnoremap <C-t> <cmd>Tags<cr>
+nnoremap <C-t> <cmd>Telescope tags<CR>
+nnoremap <C-p> <cmd>Telescope find_files<CR>
+nnoremap <C-f> <cmd>Telescope grep_string<CR>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 nmap H h
 nmap L l
-nmap <C-p> :Files<CR>
 
 nnoremap <leader>ga  :Git add %<CR>
 nnoremap <leader>grs :Git restore --staged %<CR>
