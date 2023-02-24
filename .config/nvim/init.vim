@@ -43,6 +43,12 @@ let g:easy_align_delimiters = { '\': { 'pattern': '\\$' } }
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+nnoremap <leader>ga  <cmd>Git add %<CR>
+nnoremap <leader>grs <cmd>Git restore --staged %<CR>
+nnoremap <leader>gcc <cmd>Git commit<CR>
+nnoremap <leader>gca <cmd>Git commit --amend<CR>
+nnoremap <leader>gs  <cmd>Git status<CR>
+nnoremap <F5> <cmd>Make<CR>
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
@@ -62,14 +68,6 @@ nmap ga <Plug>(EasyAlign)
 nmap H h
 nmap L l
 
-nnoremap <leader>ga  :Git add %<CR>
-nnoremap <leader>grs :Git restore --staged %<CR>
-nnoremap <leader>gcc :Git commit<CR>
-nnoremap <leader>gca :Git commit --amend<CR>
-nnoremap <leader>gs  :Git status<CR>
-nnoremap <F5> :Make<CR>
-
-autocmd BufRead,BufNewFile * set cc=80
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd BufRead,BufNewFile *.zig set ft=zig
 autocmd BufRead,BufNewFile *.meta set ft=meta
