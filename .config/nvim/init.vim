@@ -53,10 +53,6 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
-nnoremap <C-H> <C-w><C-H>
-nnoremap <C-J> <C-w><C-J>
-nnoremap <C-K> <C-w><C-K>
-nnoremap <C-L> <C-w><C-L>
 nnoremap Q @q
 nnoremap Y y$
 nnoremap <leader>m <cmd>Make<cr>
