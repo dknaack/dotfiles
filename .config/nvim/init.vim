@@ -25,7 +25,7 @@ set splitbelow splitright
 set ts=4 sw=4 sts=4
 set nofoldenable noshowmode noshowcmd
 set complete=t,i
-set statusline=\ %7{g:mode_string[mode()]}\ \|\ %f\ %m%=%l:%02c\ %y\
+set statusline=\ %7{g:mode_string[mode()]}\ \|\ %f\ %m%=%l:%02c\ %y
 set cinoptions=:0,t0,+4,(4,u0,Ws,m1,N-s,E-s,g0,h-s,P1
 set list listchars=trail:·,tab:\ \ ,nbsp:␣
 set nu rnu
