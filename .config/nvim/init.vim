@@ -67,9 +67,8 @@ nmap L l
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd BufRead,BufNewFile *.zig set ft=zig
 autocmd BufRead,BufNewFile *.meta set ft=meta
-
-autocmd FileType c,cpp set noet ts=8 sw=8 | comp! gcc
-autocmd FileType tex set spell spelllang=en,de et ts=2 sw=2
+autocmd FileType c,cpp setlocal noet ts=8 sw=8 | comp! gcc
+autocmd FileType tex setlocal spell spelllang=en,de et ts=2 sw=2 cc=0
 autocmd FileType markdown setlocal tw=80 et ts=2 sw=2
 autocmd FileType javascript,dart setlocal et ts=2 sw=2
 autocmd FileType python set et ts=4 sw=4
