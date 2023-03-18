@@ -14,6 +14,7 @@ syn match cOperator "\v\&"
 syn match cOperator "\v\|"
 syn match cOperator "\v\^"
 syn match cOperator "\v\."
+syn match cOperator "\v\%"
 syn match cComment "\v\/\/.*$"
 syn region cComment start="\/\*" end="\*\/"
 syn match cTodo /\<TODO\>/ containedin=cComment
