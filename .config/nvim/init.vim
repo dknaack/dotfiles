@@ -75,7 +75,7 @@ autocmd FileType javascript,typescript,dart setlocal et ts=2 sw=2
 autocmd FileType python setlocal et ts=4 sw=4
 
 nnoremap <F3> :call TrimWhitespace()<CR>
-autocmd BufWritePre * call TrimWhitespace()
+autocmd BufWritePre *.c,*.cpp,*.h call TrimWhitespace()
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
