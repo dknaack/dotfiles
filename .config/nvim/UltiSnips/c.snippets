@@ -121,7 +121,7 @@ snippet '^guard' "header include guard" rA
 #ifndef $1_H
 #define $1_H
 
-$0
+${0:${VISUAL}}
 
 #endif /* $1_H */ `!p import re
 if len(t[1]) > 0:
