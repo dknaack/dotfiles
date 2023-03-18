@@ -383,3 +383,11 @@ snippet KB "macros for kilobytes, megabytes, etc."
 #define GB(x) (MB(x) * 1024)
 #define TB(x) (GB(x) * 1024)
 endsnippet
+
+snippet arena "Arena type"
+struct arena {
+	void *data;
+	size_t used;
+	size_t size;
+};
+endsnippet
