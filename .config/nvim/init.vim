@@ -28,7 +28,6 @@ set number relativenumber
 set errorformat^=%-G%f:%l:\ warning:%m
 set makeprg=mk
 
-colorscheme tokyodark
 lua vim.diagnostic.config({ virtual_text = true })
 lua require('dqf').setup()
 lua require('nvim-surround').setup()
@@ -41,6 +40,9 @@ let g:mode_string = { 'n': 'NORMAL', 'v': 'VISUAL', 'V': 'V-LINE',
 	\ "\<C-V>": 'V-BLOCK', 'i': 'INSERT', 'R': 'REPLACE', 'c': 'COMMAND' }
 let g:easy_align_delimiters = { '\': { 'pattern': '\\$' } }
 let &l:briopt = 'shift:'..shiftwidth()
+let g:tokyodark_enable_italic_comment = 0
+let g:tokyodark_enable_italic = 0
+colorscheme tokyodark
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
