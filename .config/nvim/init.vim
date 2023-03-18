@@ -13,7 +13,7 @@ Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 set title mouse=a clipboard+=unnamedplus
-set colorcolumn=80 linebreak
+set colorcolumn=80 linebreak breakindent briopt=shift:4 showbreak
 set wildmode=longest,list,full
 set complete=t,i completeopt=menuone,noinsert,noselect
 set termguicolors
@@ -40,6 +40,7 @@ let g:mapleader = ' '
 let g:mode_string = { 'n': 'NORMAL', 'v': 'VISUAL', 'V': 'V-LINE',
 	\ "\<C-V>": 'V-BLOCK', 'i': 'INSERT', 'R': 'REPLACE', 'c': 'COMMAND' }
 let g:easy_align_delimiters = { '\': { 'pattern': '\\$' } }
+let &l:briopt = 'shift:'..shiftwidth()
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
