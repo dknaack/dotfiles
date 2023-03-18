@@ -1,6 +1,6 @@
 syn keyword cType i8 i16 i32 i64 isz u8 u16 u32 u64 usz f32 f64 uint
 syn keyword cType v2 v3 v4 m3x3 m4x4 m4x4_inv string box2 box3 box4
-syn keyword cKeyword static const volatile inline case default typedef
+syn keyword cKeyword static const volatile inline case default typedef extern
 syn keyword Number NULL true false
 syn match cOperator "\v\="
 syn match cOperator "\v\+"
