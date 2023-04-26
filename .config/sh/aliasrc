@@ -12,6 +12,7 @@ alias \
     du='du -h' \
     mv="mv -iv" \
     rm="trash"  \
+    typst="typst --root=$HOME/.local/share/typst/" \
     minecraft='env DRI_PRIME=1 minecraft-launcher --workDir "$XDG_DATA_HOME/minecraft\"' \
     cfg='git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME' \
 
