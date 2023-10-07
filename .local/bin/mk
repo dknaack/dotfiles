@@ -2,10 +2,14 @@
 
 if [ -f Makefile ]; then
 	make $@
+elif [ -f build.sh ]; then
+	sh build.sh $@
 elif [ -f latexmkrc ] || [ -f .latexmkrc ]; then
 	latexmk $@
-elif [ -f build.sh ]; then
-	./build.sh $@
+elif [ -f go.mod ]; then
+	go build .
+elif [ -f Cargo.toml ]; then
+	cargo build $@
 else
 	echo No suitable build file found
 	exit 1
