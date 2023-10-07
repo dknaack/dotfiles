@@ -161,3 +161,25 @@ endsnippet
 #snippet <- "gets" A
 #\gets
 #endsnippet
+
+snippet zettel "Zettel template"
+\documentclass{zettel}
+
+\title{$1}
+\date{`date +%F`}
+
+\begin{document}
+${0:${VISUAL}}
+\end{document}
+endsnippet
+
+snippet exercise "Exercise template"
+\documentclass[sheet=$1]{dexercise}
+
+\title{$2}
+\addstudent{Daniel Knaack}
+
+\begin{document}
+${0:${VISUAL}}
+\end{document}
+endsnippet
