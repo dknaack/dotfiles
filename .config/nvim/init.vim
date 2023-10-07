@@ -28,6 +28,7 @@ set list listchars=trail:·,tab:\ \ ,nbsp:␣
 set number relativenumber
 set errorformat^=%-G%f:%l:\ warning:%m
 set makeprg=mk
+set undofile
 
 lua vim.diagnostic.config({ virtual_text = true })
 lua require('dqf').setup()
