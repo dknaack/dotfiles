@@ -76,11 +76,14 @@ nmap L l
 autocmd BufRead,BufNewFile *.s set ft=nasm
 autocmd BufRead,BufNewFile *.zig set ft=zig
 autocmd BufRead,BufNewFile *.meta set ft=meta
-autocmd FileType c,cpp setlocal noet ts=8 sw=8 | comp! gcc
+autocmd BufRead,BufNewFile *.tex set ft=tex
+autocmd BufRead,BufNewFile *.typ set ft=typst et ts=2 sw=2
+autocmd FileType c,cpp,glsl setlocal noet ts=8 sw=8 | comp! gcc
 autocmd FileType tex setlocal spell spelllang=en,de et ts=2 sw=2 cc=0
-autocmd FileType markdown setlocal tw=80 et ts=2 sw=2
-autocmd FileType javascript,typescript,dart setlocal et ts=2 sw=2
+autocmd FileType markdown setlocal tw=80 et ts=2 sw=2 briopt=shift:2
+autocmd FileType html,javascript,typescript,dart setlocal et ts=2 sw=2
 autocmd FileType python setlocal et ts=4 sw=4
+autocmd FileType haskell setlocal et ts=2 sw=2
 
 nnoremap <F3> :call TrimWhitespace()<CR>
 autocmd BufWritePre *.c,*.cpp,*.h call TrimWhitespace()
