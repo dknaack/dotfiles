@@ -86,7 +86,7 @@ autocmd FileType python setlocal et ts=4 sw=4
 autocmd FileType haskell setlocal et ts=2 sw=2
 
 nnoremap <F3> :call TrimWhitespace()<CR>
-autocmd BufWritePre *.c,*.cpp,*.h call TrimWhitespace()
+autocmd BufWritePre *.c,*.cpp,*.h,*.tex call TrimWhitespace()
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
