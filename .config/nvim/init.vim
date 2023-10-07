@@ -12,6 +12,7 @@ Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'tikhomirov/vim-glsl'
 Plug 'mbbill/undotree'
 call plug#end()
 
