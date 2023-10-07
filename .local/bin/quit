@@ -3,7 +3,8 @@
 prompt() {
 	cmd="$(dmenu)"
 	[ -z "$cmd" ] && return
-	[ "$(printf "Yes\nNo" | dmenu -p "$cmd?")" = "Yes" ] && echo "$cmd"
+	answer=$(printf "Yes\nNo" | dmenu -p "$cmd?")
+	[ "$answer" = "Yes" ] && echo "$cmd"
 }
 
 case "$(printf "poweroff\nreboot\nlogout" | prompt)" in
