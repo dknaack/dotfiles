@@ -11,6 +11,7 @@ Plug 'tiagovla/tokyodark.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 set title mouse=a clipboard+=unnamedplus
@@ -33,6 +34,7 @@ set undofile
 lua vim.diagnostic.config({ virtual_text = true })
 lua require('dqf').setup()
 lua require('nvim-surround').setup()
+lua require('gitsigns').setup()
 
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
