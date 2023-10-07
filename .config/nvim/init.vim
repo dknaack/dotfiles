@@ -4,6 +4,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'kylechui/nvim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rsi'
 Plug 'junegunn/vim-easy-align'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'tiagovla/tokyodark.nvim'
