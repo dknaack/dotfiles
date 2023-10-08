@@ -14,6 +14,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'mbbill/undotree'
+Plug 'dknaack/qf-diagnostics.nvim'
 call plug#end()
 
 set title mouse=a clipboard+=unnamedplus
@@ -34,7 +35,7 @@ set makeprg=mk
 set undofile
 
 lua vim.diagnostic.config({ virtual_text = true })
-lua require('dqf').setup()
+lua require('qf-diagnostics').setup()
 lua require('nvim-surround').setup()
 lua require('gitsigns').setup()
 
