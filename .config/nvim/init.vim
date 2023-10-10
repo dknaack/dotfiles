@@ -1,5 +1,7 @@
 call plug#begin()
 Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
 Plug 'tpope/vim-dispatch'
 Plug 'kylechui/nvim-surround'
 Plug 'tpope/vim-unimpaired'
