@@ -49,9 +49,17 @@ let g:mode_string = { 'n': 'NORMAL', 'v': 'VISUAL', 'V': 'V-LINE',
 	\ "\<C-V>": 'V-BLOCK', 'i': 'INSERT', 'R': 'REPLACE', 'c': 'COMMAND' }
 let g:easy_align_delimiters = { '\': { 'pattern': '\\$' } }
 let &l:briopt = 'shift:'..shiftwidth()
-let g:tokyodark_enable_italic_comment = 0
-let g:tokyodark_enable_italic = 0
+
 colorscheme tokyodark
+hi clear Typedef
+hi clear Identifier
+hi clear Function
+hi clear StorageClass
+hi clear @type.qualifier
+hi link StorageClass Keyword
+hi link Typedef Type
+hi link @namespace NONE
+hi link @type.qualifier Keyword
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
