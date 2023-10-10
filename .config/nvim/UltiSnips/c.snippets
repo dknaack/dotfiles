@@ -391,3 +391,21 @@ struct arena {
 	size_t size;
 };
 endsnippet
+
+snippet string_equals "Comparing custom strings"
+bool
+string_equals(string a, string b)
+{
+	if (a.length != b.length) {
+		return false;
+	}
+
+	while (a.length-- > 0) {
+		if (*a.at++ != *b.at++) {
+			return false;
+		}
+	}
+
+	return true;
+}
+endsnippet
