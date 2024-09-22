@@ -54,12 +54,15 @@ colorscheme tokyodark
 hi clear Typedef
 hi clear Identifier
 hi clear Function
+hi clear Constant
 hi clear StorageClass
 hi clear @type.qualifier
+hi clear @text.note
 hi link StorageClass Keyword
 hi link Typedef Type
 hi link @namespace NONE
 hi link @type.qualifier Keyword
+hi link @text.note Constant
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
