@@ -16,6 +16,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'tikhomirov/vim-glsl'
 Plug 'mbbill/undotree'
 Plug 'dknaack/qf-diagnostics.nvim'
+Plug 'windwp/nvim-autopairs'
 call plug#end()
 
 set title mouse=a clipboard+=unnamedplus
@@ -38,6 +39,7 @@ set undofile
 lua vim.diagnostic.config({ virtual_text = true })
 lua require('qf-diagnostics').setup()
 lua require('nvim-surround').setup()
+lua require('nvim-autopairs').setup()
 
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
