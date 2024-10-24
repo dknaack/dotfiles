@@ -39,10 +39,12 @@ set errorformat^=%-G%f:%l:\ warning:%m
 set makeprg=mk
 set undofile
 
-lua vim.diagnostic.config({ virtual_text = true })
-lua require('qf-diagnostics').setup()
-lua require('nvim-surround').setup()
-lua require('nvim-autopairs').setup()
+lua <<EOF
+vim.diagnostic.config({ virtual_text = true })
+require('nvim-surround').setup()
+require('qf-diagnostics').setup()
+require('nvim-autopairs').setup()
+EOF
 
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
