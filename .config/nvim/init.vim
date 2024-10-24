@@ -16,6 +16,9 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'tikhomirov/vim-glsl'
 Plug 'mbbill/undotree'
 Plug 'dknaack/qf-diagnostics.nvim'
+Plug 'dknaack/vim-proverif'
+Plug 'dknaack/vim-hlpsl'
+Plug 'dknaack/vim-metamath'
 Plug 'windwp/nvim-autopairs'
 call plug#end()
 
