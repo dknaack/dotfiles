@@ -8,7 +8,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rsi'
 Plug 'junegunn/vim-easy-align'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
