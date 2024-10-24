@@ -13,7 +13,6 @@ Plug 'tiagovla/tokyodark.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'mattn/emmet-vim'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'lewis6991/gitsigns.nvim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'mbbill/undotree'
 Plug 'dknaack/qf-diagnostics.nvim'
@@ -39,7 +38,6 @@ set undofile
 lua vim.diagnostic.config({ virtual_text = true })
 lua require('qf-diagnostics').setup()
 lua require('nvim-surround').setup()
-lua require('gitsigns').setup()
 
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
