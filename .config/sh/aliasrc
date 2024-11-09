@@ -18,7 +18,7 @@ alias \
 
 # Shortcuts
 alias \
-    SS="doas systemctl" \
+    SS="sudo systemctl" \
     SU="systemctl --user" \
     g="git" \
     gd="git diff" \
@@ -31,7 +31,7 @@ alias \
     mutt="neomutt" \
     p="paru" \
     sl="ls" \
-	se="doas $EDITOR" \
+	se="sudo $EDITOR" \
 	e="$EDITOR" \
     z="zathura" \
     py="ipython"
