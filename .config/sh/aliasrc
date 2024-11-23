@@ -11,9 +11,7 @@ alias \
     df='df -h' \
     du='du -h' \
     mv="mv -iv" \
-    rm="trash"  \
-    typst="typst --root=$HOME/.local/share/typst/" \
-    minecraft='env DRI_PRIME=1 minecraft-launcher --workDir "$XDG_DATA_HOME/minecraft/"' \
+    rm="trash" \
     cfg='git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME' \
 
 # Shortcuts
@@ -26,12 +24,8 @@ alias \
     gs="git status" \
     iv=sxiv \
     ka=killall \
-    la="ls -a" \
-    ll="ls -al" \
-    mutt="neomutt" \
     p="paru" \
     sl="ls" \
 	se="sudo $EDITOR" \
 	e="$EDITOR" \
-    z="zathura" \
-    py="ipython"
+    z="zathura"
