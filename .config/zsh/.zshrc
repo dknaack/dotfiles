@@ -19,7 +19,6 @@ source "$HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 source "${XDG_CONFIG_HOME:-$HOME/.config}/sh/aliasrc"
-source "${XDG_CONFIG_HOME:-$HOME/.config}/functions"
 
 zle-keymap-select() {
 	if [[ ${KEYMAP} == vicmd ]] ||
