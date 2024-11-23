@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# Display configuration
-if [ "$(hostname)" = "archlinux-desktop" ]; then
-	xrandr --output DVI-D-0 --mode 1440x900 --pos 0x0 --rotate right \
-		--output DVI-D-1 --mode 1920x1080 --pos 900x320 --rotate normal --primary
-fi
-
 gdmauth=$XAUTHORITY
 unset XAUTHORITY
 export XAUTHORITY="$XDG_CONFIG_HOME/.xauth"
