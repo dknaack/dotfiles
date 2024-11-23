@@ -52,15 +52,17 @@ export \
 	UNISON="$XDG_DATA_HOME/unison" \
 	WINEPREFIX="$HOME/.config/wine" \
 	VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.vim" | so $MYVIMRC' \
-	XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" \
 	XINITRC="$XDG_CONFIG_HOME/X11/xinitrc" \
 	ZDOTDIR="$HOME/.config/zsh"
 
 # Misc settings
 export \
-	MANWIDTH=80 \
 	CHROME_EXECUTABLE="/usr/bin/chromium" \
 	FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix" \
+	GTK_THEME=Adwaita:dark \
+	HSA_OVERRIDE_GFX_VERSION="10.3.0" \
+	MANWIDTH=80 \
+	QT_STYLE_OVERRIDE=Adwaita-dark \
 	XKB_DEFAULT_LAYOUT="us" \
 	XKB_DEFAULT_VARIANT="altgr-intl" \
 	_JAVA_AWT_WM_NONREPARENTING=1
