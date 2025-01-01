@@ -20,6 +20,8 @@ Plug 'dknaack/vim-proverif'
 Plug 'dknaack/vim-hlpsl'
 Plug 'dknaack/vim-metamath'
 Plug 'windwp/nvim-autopairs'
+Plug 'Julian/lean.nvim'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 set title mouse=a clipboard+=unnamedplus
@@ -44,6 +46,7 @@ vim.diagnostic.config({ virtual_text = true })
 require('nvim-surround').setup()
 require('qf-diagnostics').setup()
 require('nvim-autopairs').setup()
+require('lean').setup({ mappings = true })
 EOF
 
 let g:UltiSnipsExpandTrigger = '<tab>'
