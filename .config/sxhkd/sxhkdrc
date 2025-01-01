@@ -25,6 +25,8 @@ XF86AudioMute
 		pactl set-sink-mute @DEFAULT_SINK@ toggle
 shift + XF86Audio{Lower,Raise}Volume
 		mpc volume {-,+}5
+XF86AudioMicMute
+		pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # change brightness
 super + {F1,F2}
