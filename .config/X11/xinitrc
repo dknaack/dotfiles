@@ -9,7 +9,7 @@ xauth merge "$gdmauth"
 xrdb "$HOME/.config/Xresources"
 xset r rate 270 50
 xsetroot -cursor_name left_ptr
-setxkbmap us altgr-intl
+setxkbmap eu
 
 # programs
 conky &
