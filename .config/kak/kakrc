@@ -1,0 +1,44 @@
+set-option global tabstop 4
+set-option global scrolloff 4,3
+
+add-highlighter global/ number-lines -relative -min-digits 5 -separator ' '
+add-highlighter global/ wrap -word -indent
+add-highlighter global/ show-whitespaces -lf ' ' -only-trailing
+add-highlighter global/ show-matching
+
+# Match (delete, surround, replace)
+declare-user-mode match
+declare-user-mode match-delete
+declare-user-mode match-surround
+declare-user-mode match-replace
+
+define-command declare-match-pair -params 4 -docstring 'declare-match-pair <description> <alias> <opening> <closing>: declare match pair' %{
+  map -docstring %arg{1} global match-surround %arg{2} "Z\i%arg{3}<esc>\a%arg{4}<esc>Hz"
+  map -docstring %arg{1} global match-surround %arg{3} "Z\i%arg{3}<esc>\a%arg{4}<esc>Hz"
+  map -docstring %arg{1} global match-surround %arg{4} "Z\i%arg{3}<esc>\a%arg{4}<esc>Hz"
+}
+
+declare-match-pair 'parenthesis block' b ( )
+declare-match-pair 'brace block' B { }
+declare-match-pair 'bracket block' r [ ]
+declare-match-pair 'angle block' a <lt> <gt>
+
+map -docstring 'enter match mode' global normal m ':enter-user-mode match<ret>'
+map -docstring 'goto matching bracket' global match m 'm'
+map -docstring 'surround selection with character' global match s ':enter-user-mode match-surround<ret>'
+map -docstring 'replace surrounding character' global match r ':enter-user-mode match-replace<ret>'
+map -docstring 'delete surrounding character' global match d ':enter-user-mode match-delete<ret>'
+map -docstring 'select around object' global match a '<a-a>'
+map -docstring 'select inside object' global match i '<a-i>'
+
+# Plugins
+evaluate-commands %sh{
+    plugins="$kak_config/plugins"
+    mkdir -p "$plugins"
+    [ ! -e "$plugins/plug.kak" ] && \
+        git clone -q https://github.com/andreyorst/plug.kak.git "$plugins/plug.kak"
+    printf "%s\n" "source '$plugins/plug.kak/rc/plug.kak'"
+}
+
+plug "andreyorst/plug.kak" noload
+plug "alexherbo2/auto-pairs.kak"
