@@ -42,7 +42,7 @@ preexec() {
 }
 
 find-file() {
-	local file="$(find -L . -mindepth 1 -type f 2>/dev/null | cut -b3- | fzf)"
+	local file="$(rg --files | fzf)"
 	if [ -n "$file" ]; then
 		zle && zle kill-buffer && zle -R
 		echo -ne '\e[5 q'
@@ -51,12 +51,14 @@ find-file() {
 }
 
 find-note() {
-	local file="$(cd "$HOME/notes"; find -L . -mindepth 1 -type f 2>/dev/null | cut -b3- | fzf)"
+	pushd "$HOME/notes" >/dev/null
+	local file="$(rg --files | fzf)"
 	if [ -n "$file" ]; then
 		zle && zle kill-buffer && zle -R
 		echo -ne '\e[5 q'
-		$EDITOR "$HOME/notes/$file"
+		$EDITOR "$file"
 	fi
+	popd >/dev/null
 }
 
 zle -N zle-keymap-select
