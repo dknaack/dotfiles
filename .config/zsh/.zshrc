@@ -41,7 +41,7 @@ preexec() {
 	echo -ne '\e[5 q'
 }
 
-fzf-edit-file() {
+find-file() {
 	local file="$(find -L . -mindepth 1 -type f 2>/dev/null | cut -b3- | fzf)"
 	if [ -n "$file" ]; then
 		zle && zle kill-buffer && zle -R
@@ -50,17 +50,28 @@ fzf-edit-file() {
 	fi
 }
 
+find-note() {
+	local file="$(cd "$HOME/notes"; find -L . -mindepth 1 -type f 2>/dev/null | cut -b3- | fzf)"
+	if [ -n "$file" ]; then
+		zle && zle kill-buffer && zle -R
+		echo -ne '\e[5 q'
+		$EDITOR "$HOME/notes/$file"
+	fi
+}
+
 zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N edit-command-line
-zle -N fzf-edit-file
+zle -N find-file
+zle -N find-note
 echo -ne '\e[5 q'
 
 bindkey -v
 bindkey ^A vi-beginning-of-line
 bindkey ^E vi-end-of-line
-bindkey ^P fzf-edit-file
 bindkey ^v edit-command-line
+bindkey ^P find-file
+bindkey ^N find-note
 
 promptinit
 fpath=("$ZDOTDIR/prompts" "$ZDOTDIR" "$fpath[@]")
