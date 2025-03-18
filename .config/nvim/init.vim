@@ -23,6 +23,7 @@ Plug 'windwp/nvim-autopairs'
 Plug 'Julian/lean.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'kaarmu/typst.vim'
 call plug#end()
 
 set title mouse=a clipboard+=unnamedplus
