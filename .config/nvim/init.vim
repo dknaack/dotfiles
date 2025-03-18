@@ -22,6 +22,7 @@ Plug 'dknaack/vim-metamath'
 Plug 'windwp/nvim-autopairs'
 Plug 'Julian/lean.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 set title mouse=a clipboard+=unnamedplus
@@ -47,6 +48,7 @@ require('nvim-surround').setup()
 require('qf-diagnostics').setup()
 require('nvim-autopairs').setup()
 require('lean').setup({ mappings = true })
+require('gitsigns').setup()
 EOF
 
 let g:UltiSnipsExpandTrigger = '<tab>'
