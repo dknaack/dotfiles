@@ -1,6 +1,8 @@
 #!/bin/sh
 
-export PATH="$HOME/.local/bin:$PATH:$HOME/.local/share/cargo/bin/:$HOME/.local/share/go/bin/"
+export \
+	PATH="$HOME/.local/bin:$PATH:$HOME/.local/share/cargo/bin/:$HOME/.local/share/go/bin/"
+	MANPATH="$HOME/.local/share/man:/usr/share/man"
 
 # XDG base directories
 export \
