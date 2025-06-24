@@ -2,15 +2,13 @@
 
 # Default options
 alias \
-    ls="ls -Fh --color=auto --group-directories-first" \
+    ls="ls -Fh" \
 	diff="diff --color=auto" \
-    grep="grep --color=auto" \
 	ip="ip -color=auto" \
 	gdb="gdb -q" \
     cp="cp -iv" \
     df='df -h' \
     du='du -h' \
-    mv="mv -iv" \
     rm="trash" \
     cfg='git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME' \
 
