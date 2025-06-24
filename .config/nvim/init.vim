@@ -77,11 +77,18 @@ hi link @text.note Constant
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-nnoremap <leader>ga  <cmd>Git add %<CR>
+nnoremap <leader>gaa <cmd>Git add %<CR>
+nnoremap <leader>gap <cmd>Git add -p %<CR>
 nnoremap <leader>grs <cmd>Git restore --staged %<CR>
 nnoremap <leader>gcc <cmd>Git commit<CR>
 nnoremap <leader>gca <cmd>Git commit --amend<CR>
-nnoremap <leader>gs  <cmd>Git status<CR>
+nnoremap <leader>gss <cmd>Git stash<CR>
+nnoremap <leader>gsp <cmd>Git stash pop<CR>
+nnoremap <leader>gds <cmd>Git diff --staged %<CR>
+nnoremap <leader>gg <cmd>Git status<CR>
+nnoremap <leader>gb <cmd>Git blame<CR>
+nnoremap <leader>gl <cmd>0Gclog<CR>
+nnoremap <leader>gr <cmd>Git rebase -i<CR>
 nnoremap <F5> <cmd>Make<CR>
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
