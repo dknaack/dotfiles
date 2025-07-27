@@ -50,22 +50,10 @@ find-file() {
 	fi
 }
 
-find-note() {
-	pushd "$HOME/notes" >/dev/null
-	local file="$(rg --files | fzf)"
-	if [ -n "$file" ]; then
-		zle && zle kill-buffer && zle -R
-		echo -ne '\e[5 q'
-		$EDITOR "$file"
-	fi
-	popd >/dev/null
-}
-
 zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N edit-command-line
 zle -N find-file
-zle -N find-note
 echo -ne '\e[5 q'
 
 bindkey -v
@@ -73,7 +61,6 @@ bindkey ^A vi-beginning-of-line
 bindkey ^E vi-end-of-line
 bindkey ^v edit-command-line
 bindkey ^P find-file
-bindkey ^N find-note
 
 promptinit
 fpath=("$ZDOTDIR/prompts" "$ZDOTDIR" "$fpath[@]")
