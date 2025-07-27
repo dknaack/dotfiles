@@ -14,12 +14,14 @@ HISTFILE="$HOME/.cache/zsh/history"
 setopt noclobber
 setopt autocd
 
+# Plugins
 source "$HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 source "${XDG_CONFIG_HOME:-$HOME/.config}/sh/aliasrc"
 
+# Custom commands
 zle-keymap-select() {
 	if [[ ${KEYMAP} == vicmd ]] ||
 		[[ $1 = 'block' ]]; then
@@ -56,16 +58,19 @@ zle -N edit-command-line
 zle -N find-file
 echo -ne '\e[5 q'
 
+# Key bindings
 bindkey -v
 bindkey ^A vi-beginning-of-line
 bindkey ^E vi-end-of-line
 bindkey ^v edit-command-line
 bindkey ^P find-file
 
+# Prompt
 promptinit
 fpath=("$ZDOTDIR/prompts" "$ZDOTDIR" "$fpath[@]")
 PROMPT='%1~ %F{blue}%(!.#.$) %f'
 
+# Completions
 compinit
 _comp_options+=(globdots) # Include hidden files
 zstyle ':completion:*' menu select
