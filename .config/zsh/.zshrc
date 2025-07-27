@@ -64,6 +64,8 @@ bindkey ^A vi-beginning-of-line
 bindkey ^E vi-end-of-line
 bindkey ^v edit-command-line
 bindkey ^P find-file
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 
 # Prompt
 promptinit
