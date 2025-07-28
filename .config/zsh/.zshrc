@@ -5,6 +5,7 @@ autoload -U compinit
 autoload -Uz promptinit
 autoload edit-command-line
 zmodload zsh/complist
+compinit
 
 # History
 HISTSIZE=10000
@@ -17,6 +18,7 @@ setopt autocd
 # Plugins
 source "$HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.config/zsh/plugins/zsh-cjd/zsh-cjd.zsh"
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 source "${XDG_CONFIG_HOME:-$HOME/.config}/sh/aliasrc"
@@ -73,7 +75,6 @@ fpath=("$ZDOTDIR/prompts" "$ZDOTDIR" "$fpath[@]")
 PROMPT='%1~ %F{blue}%(!.#.$) %f'
 
 # Completions
-compinit
 _comp_options+=(globdots) # Include hidden files
 zstyle ':completion:*' menu select
 zstyle ':completion:*:*:mpv:*' file-patterns '*.(#i)(flv|mp4|webm|mkv|wmv|mov|avi|mp3|ogg|wma|flac|wav|aiff|m4a|m4b|m4v|gif|ifo)(-.) *(-/):directories' '*:all-files'
