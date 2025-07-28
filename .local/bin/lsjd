@@ -1,0 +1,3 @@
+#!/bin/sh
+
+tree -d -L 3 "$HOME/docs"

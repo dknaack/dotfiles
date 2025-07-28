@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+import os
+import glob
+
+from sys import argv
+from pathlib import Path
+
+acid, *name = argv[1].split(' ')
+name = ' '.join(argv[1:])
+area, cat, *_ = acid
+
+root = Path.home() / "docs"
+base = root / glob.glob(f"{area}0 */{area}{cat} *", root_dir=root)[0] / name
+os.makedirs(base)
