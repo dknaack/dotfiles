@@ -104,6 +104,7 @@ nmap H h
 nmap L l
 
 autocmd BufRead,BufNewFile *.s set ft=nasm
+autocmd BufRead,BufNewFile *.sage set ft=python
 autocmd BufRead,BufNewFile *.zig set ft=zig
 autocmd BufRead,BufNewFile *.meta set ft=meta
 autocmd BufRead,BufNewFile *.tex set ft=tex
