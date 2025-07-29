@@ -48,12 +48,13 @@ export \
 	PKG_CONFIG_PATH="$HOME/.local/share/pkgconfig" \
 	REMINDERS="$HOME/docs/.reminders" \
 	RUSTUP_HOME="$HOME/.local/share/rustup" \
+	TERMINFO="$XDG_DATA_HOME/terminfo" \
+	TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config" \
 	TEXMFHOME="$XDG_DATA_HOME/texmf" \
 	TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var" \
-	TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config" \
 	UNISON="$XDG_DATA_HOME/unison" \
-	WINEPREFIX="$HOME/.config/wine" \
 	VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.vim" | so $MYVIMRC' \
+	WINEPREFIX="$HOME/.config/wine" \
 	XINITRC="$XDG_CONFIG_HOME/X11/xinitrc" \
 	ZDOTDIR="$HOME/.config/zsh"
 
