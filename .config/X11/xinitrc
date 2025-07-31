@@ -22,7 +22,7 @@ unclutter &
 sxhkd &
 discord &
 signal-desktop &
-anki &
+#anki &
 feh --no-fehbg --bg-fill "$HOME/pics/wallpaper.jpg" &
 
 exec dwm-session
