@@ -42,7 +42,6 @@ vim.diagnostic.config({ virtual_text = true })
 require('nvim-surround').setup()
 require('qf-diagnostics').setup()
 require('nvim-autopairs').setup()
-require('lean').setup({ mappings = true })
 require('gitsigns').setup()
 EOF
 
