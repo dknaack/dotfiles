@@ -78,3 +78,11 @@ PROMPT='%1~ %F{blue}%(!.#.$) %f'
 _comp_options+=(globdots) # Include hidden files
 zstyle ':completion:*' menu select
 zstyle ':completion:*:*:mpv:*' file-patterns '*.(#i)(flv|mp4|webm|mkv|wmv|mov|avi|mp3|ogg|wma|flac|wav|aiff|m4a|m4b|m4v|gif|ifo)(-.) *(-/):directories' '*:all-files'
+
+# Fix discord
+discord_config="$HOME/.config/discord/settings.json"
+if ! grep -Fq "MIN_WIDTH" "$discord_config"; then
+	sed -i '1a\
+		"MIN_WIDTH": 0,\
+		"MIN_HEIGHT": 0,' "$discord_config"
+fi
