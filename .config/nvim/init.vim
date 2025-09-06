@@ -16,7 +16,6 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'mbbill/undotree'
 Plug 'dknaack/qf-diagnostics.nvim'
 Plug 'windwp/nvim-autopairs'
-Plug 'neovim/nvim-lspconfig'
 Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
