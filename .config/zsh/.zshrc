@@ -86,3 +86,11 @@ if ! grep -Fq "MIN_WIDTH" "$discord_config"; then
 		"MIN_WIDTH": 0,\
 		"MIN_HEIGHT": 0,' "$discord_config"
 fi
+
+# File manager
+lf() {
+    dir="$(/usr/bin/lf -print-last-dir "$@")"
+    if [ -n "$dir" ] && [ -d "$dir" ]; then
+        cd "$dir"
+    fi
+}
