@@ -373,8 +373,8 @@ snippet assert "Alternative assert for debugging"
 #define assert(expr) ((expr) ? (void)0 : (void)(*(volatile int *)0 = 0))
 endsnippet
 
-snippet assert_gcc "Alternative assert for debugging"
-#define assert(expr) ((expr) ? (void)0 : (void)__builtin_trap())
+snippet ASSERT "Alternative assert for debugging"
+#define ASSERT(expr) ((expr) ? (void)0 : (void)__builtin_trap())
 endsnippet
 
 snippet KB "macros for kilobytes, megabytes, etc."
